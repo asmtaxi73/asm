@@ -10,6 +10,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { STATIONS } from "./data/stations.mjs";
 import { HUBS } from "./data/hubs.mjs";
+import { photoHero, photoCard } from "./data/photos.mjs";
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 
@@ -140,6 +141,7 @@ const header = (prefix) => `
       <div class="nav-links">
         <a href="${prefix}index.html">Accueil</a>
         <a href="${prefix}stations.html">Destinations &amp; tarifs</a>
+        <a href="${prefix}transport-medical.html">Médical</a>
         <a href="${prefix}index.html#services">Services</a>
         <a href="${prefix}index.html#avis">Avis</a>
         <a href="${prefix}index.html#devis">Réservation</a>
@@ -185,6 +187,7 @@ const footer = (prefix) => `
           <a href="tel:${SITE.telIntl}">☎ ${SITE.tel}</a>
           <a href="https://wa.me/${SITE.wa}" target="_blank" rel="noopener">💬 WhatsApp</a>
           <a href="mailto:${SITE.email}">📧 ${SITE.email}</a>
+          <a href="${prefix}transport-medical.html">🏥 Transport médical (CPAM)</a>
           <a>📍 Gare SNCF, 73700 Bourg-Saint-Maurice</a>
         </div>
       </div>
@@ -325,11 +328,12 @@ function destinationPage(d) {
     ? `Transfert privé entre la gare TGV de Bourg-Saint-Maurice, les aéroports et ${d.name}. Ponctuel, confortable, disponible jour et nuit — skis et bagages bienvenus.`
     : `Transfert privé entre ${d.name}, Bourg-Saint-Maurice et toutes les stations de Haute-Tarentaise. Ponctuel, confortable, disponible jour et nuit.`;
 
+  const heroPhoto = photoHero(d.slug);
   return `${head(d)}
 <body>
 ${header("../")}
 
-  <section class="page-hero">
+  <section class="page-hero"${heroPhoto ? ` style="--photo:url('${heroPhoto}')"` : ""}>
     <div class="container">
       <div class="breadcrumb"><a href="../index.html">Accueil</a> › <a href="../stations.html">Destinations &amp; tarifs</a> › Taxi ${d.name}</div>
       <div class="kicker">${d.tag}</div>
@@ -391,7 +395,8 @@ ${footer("../")}
 function hubPage() {
   const card = (d, prefix) => {
     const from = d.gare14 ?? d.base;
-    return `<a href="${prefix}destinations/${d.slug}.html" class="dest-card">
+    const p = photoCard(d.slug);
+    return `<a href="${prefix}destinations/${d.slug}.html" class="dest-card"${p ? ` style="--photo:url('${p}')"` : ""}>
           <span class="tag">${d.tag}</span><span class="go">→</span>
           <div><h3>${d.name}</h3><div class="meta">${d.duree} depuis la gare BSM • dès ${from} €</div></div>
         </a>`;
@@ -480,6 +485,7 @@ function sitemap() {
   const urls = [
     { loc: `${SITE.base}/`, prio: "1.0" },
     { loc: `${SITE.base}/stations.html`, prio: "0.9" },
+    { loc: `${SITE.base}/transport-medical.html`, prio: "0.9" },
     ...[...STATIONS, ...HUBS].map((d) => ({
       loc: `${SITE.base}/destinations/${d.slug}.html`,
       prio: d.slug === "geneve" || d.slug === "la-rosiere" ? "0.9" : "0.8",

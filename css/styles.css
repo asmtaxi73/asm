@@ -169,7 +169,11 @@ section { padding: 84px 0; }
 /* ---------- Hero accueil ---------- */
 .hero {
   position: relative; overflow: hidden;
-  background: linear-gradient(170deg, var(--ardoise) 0%, #23404e 55%, #2f5566 100%);
+  /* --photo (optionnelle) = photo de fond, posée sous un voile ardoise lisible */
+  background-image:
+    linear-gradient(170deg, rgba(24, 40, 50, 0.92) 0%, rgba(31, 52, 64, 0.78) 55%, rgba(39, 66, 80, 0.72) 100%),
+    var(--photo, linear-gradient(170deg, var(--ardoise) 0%, #23404e 55%, #2f5566 100%));
+  background-size: cover; background-position: center;
   padding: 92px 0 150px;
 }
 .hero::before {
@@ -235,9 +239,10 @@ section { padding: 84px 0; }
 .dest-card {
   position: relative; display: flex; flex-direction: column; justify-content: flex-end;
   min-height: 235px; padding: 26px 24px; overflow: hidden; border-radius: var(--radius);
-  background:
-    radial-gradient(340px 200px at 85% -20%, rgba(78,159,196,0.35), transparent 65%),
-    linear-gradient(160deg, var(--ardoise-2), var(--ardoise));
+  background-image:
+    linear-gradient(180deg, rgba(28, 45, 54, 0.18) 0%, rgba(24, 40, 50, 0.9) 78%),
+    var(--photo, linear-gradient(160deg, var(--ardoise-2), var(--ardoise)));
+  background-size: cover; background-position: center;
   border: 1px solid rgba(78, 159, 196, 0.25);
   transition: var(--transition);
 }
@@ -415,7 +420,10 @@ section { padding: 84px 0; }
    PAGES DESTINATION
    ============================================================ */
 .page-hero {
-  background: linear-gradient(170deg, var(--ardoise) 0%, #23404e 60%, #2f5566 100%);
+  background-image:
+    linear-gradient(170deg, rgba(24, 40, 50, 0.93) 0%, rgba(31, 52, 64, 0.82) 55%, rgba(39, 66, 80, 0.75) 100%),
+    var(--photo, linear-gradient(170deg, var(--ardoise) 0%, #23404e 60%, #2f5566 100%));
+  background-size: cover; background-position: center;
   position: relative; overflow: hidden; padding: 64px 0 72px;
 }
 .page-hero::before {

@@ -15,19 +15,28 @@ Site statique (HTML/CSS/JS) optimisé pour le référencement local.
 
 ```
 taxi/
-├── index.html              → page d'accueil
-├── destinations/
-│   ├── geneve.html         → transfert aéroport de Genève (priorité SEO n°1)
-│   ├── lyon.html           → transfert aéroport de Lyon-Saint-Exupéry
-│   ├── chambery.html       → transfert Chambéry (aéroport + gare)
-│   ├── grenoble.html       → transfert Grenoble
-│   └── stations.html       → navettes vers les stations de ski
-├── css/styles.css          → design (thème montagne)
+├── index.html              → page d'accueil (design noir & or « Alpine Premium »)
+├── stations.html           → hub : toutes les destinations & tarifs (GÉNÉRÉ)
+├── destinations/*.html     → 22 pages trajets (GÉNÉRÉES — ne pas éditer à la main)
+├── data/stations.mjs       → fiches des 15 stations/villages (contenu + tarifs)
+├── data/hubs.mjs           → fiches des 7 aéroports/gares/villes
+├── generate.mjs            → générateur : node generate.mjs
+├── css/styles.css          → design (thème noir & or)
 ├── js/main.js              → menu, FAQ, formulaire de devis
-├── robots.txt              → autorise l'indexation
-├── sitemap.xml             → plan du site pour Google
+├── robots.txt / sitemap.xml→ SEO (sitemap GÉNÉRÉ par generate.mjs)
 └── .claude/serve.mjs       → serveur d'aperçu local (node .claude/serve.mjs)
 ```
+
+### ✨ Modifier ou ajouter une destination
+
+1. Éditer la fiche dans `data/stations.mjs` (ou `data/hubs.mjs`) — textes,
+   tarifs (`gare14`, `supplement`), FAQ…
+2. Lancer `node generate.mjs` : les 22 pages + stations.html + sitemap.xml
+   sont refabriqués automatiquement, cohérents entre eux.
+3. Commit + push : Vercel redéploie tout seul.
+
+Règles tarifaires (modifiables dans generate.mjs) : 5-8 passagers = +15 €
+(local) ou +30 € (longue distance) ; nuit/dimanche/férié = +15 % arrondi à 5 €.
 
 ## ⚠️ Encore à faire avant la mise en ligne
 

@@ -5,53 +5,54 @@
   Tél : 07 67 67 69 81 · Email : asm.taxi73@gmail.com
   ⚠ Domaine provisoire : www.asm-taxi.fr → remplacer partout
     par le domaine définitif une fois acheté.
-  ⚠ Tarifs indicatifs à ajuster + remplacer les avis d'exemple.
+  ⚠ Tarifs indicatifs (alignés marché local) — à valider.
+  ⚠ Avis clients = exemples à remplacer par de vrais avis.
+  ⚠ Tuiles « partenaires » = créations typographiques :
+    remplacez-les par les logos officiels de vos partenaires
+    (avec leur accord).
+  Pages destinations : générées par generate.mjs (node generate.mjs)
   ============================================================
 -->
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ASM TAXI | Taxi Bourg-Saint-Maurice — Aéroports Genève, Lyon & stations</title>
-  <meta name="description" content="ASM TAXI, votre taxi à Bourg-Saint-Maurice (gare SNCF) : transferts aéroports Genève, Lyon, Chambéry, Grenoble et navettes stations Les Arcs, La Plagne, Val d'Isère, Tignes. 7j/7, devis gratuit. ☎ 07 67 67 69 81" />
-  <meta name="keywords" content="ASM TAXI, taxi Bourg-Saint-Maurice, taxi Bourg Saint Maurice, taxi gare Bourg-Saint-Maurice, transfert aéroport Genève, navette Lyon Saint-Exupéry, taxi station Les Arcs, taxi Val d'Isère, navette Tignes, taxi Tarentaise" />
+  <title>ASM TAXI | Taxi Bourg-Saint-Maurice — Gare, stations & aéroports</title>
+  <meta name="description" content="ASM TAXI, votre taxi à la gare de Bourg-Saint-Maurice : navettes stations (La Rosière, Les Arcs, Val d'Isère, Tignes, La Plagne) et transferts aéroports (Genève, Lyon, Chambéry, Grenoble). 7j/7, 24h/24. ☎ 07 67 67 69 81" />
+  <meta name="keywords" content="ASM TAXI, taxi Bourg-Saint-Maurice, taxi gare Bourg-Saint-Maurice, taxi La Rosière, taxi Les Arcs, taxi Val d'Isère, taxi Tignes, transfert aéroport Genève, navette station Tarentaise" />
   <link rel="canonical" href="https://www.asm-taxi.fr/" />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="ASM TAXI" />
 
-  <!-- Géolocalisation (SEO local) -->
   <meta name="geo.region" content="FR-73" />
   <meta name="geo.placename" content="Bourg-Saint-Maurice" />
   <meta name="geo.position" content="45.6180;6.7690" />
   <meta name="ICBM" content="45.6180, 6.7690" />
 
-  <!-- Open Graph / réseaux sociaux -->
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="fr_FR" />
   <meta property="og:site_name" content="ASM TAXI" />
-  <meta property="og:title" content="ASM TAXI — Taxi Bourg-Saint-Maurice | Transferts aéroports & stations" />
-  <meta property="og:description" content="Transferts aéroports Genève, Lyon, Chambéry, Grenoble et navettes vers toutes les stations. Disponible 7j/7. Devis gratuit." />
+  <meta property="og:title" content="ASM TAXI — Taxi Bourg-Saint-Maurice | Gare, stations & aéroports" />
+  <meta property="og:description" content="Navettes stations et transferts aéroports au départ de la gare de Bourg-Saint-Maurice. 7j/7, 24h/24. Devis gratuit." />
   <meta property="og:url" content="https://www.asm-taxi.fr/" />
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230d1b2a'/%3E%3Ctext x='50' y='68' font-size='58' text-anchor='middle'%3E%F0%9F%9A%95%3C/text%3E%3C/svg%3E" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%230c0c0e'/%3E%3Ctext x='50' y='64' font-family='Arial' font-size='34' font-weight='bold' text-anchor='middle' fill='%23c9a45c'%3EASM%3C/text%3E%3C/svg%3E" />
   <link rel="stylesheet" href="css/styles.css" />
 
-  <!-- Données structurées : entreprise de taxi (SEO local Google) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "TaxiService",
     "name": "ASM TAXI",
     "alternateName": "Taxi Bourg-Saint-Maurice",
-    "image": "https://www.asm-taxi.fr/img/taxi.jpg",
     "url": "https://www.asm-taxi.fr/",
     "telephone": "+33767676981",
     "email": "asm.taxi73@gmail.com",
     "priceRange": "€€",
     "areaServed": [
-      "Bourg-Saint-Maurice", "Les Arcs", "La Plagne", "Val d'Isère", "Tignes",
-      "Sainte-Foy-Tarentaise", "La Rosière", "Peisey-Vallandry", "Tarentaise"
+      "Bourg-Saint-Maurice", "La Rosière", "Les Arcs", "Val d'Isère", "Tignes",
+      "La Plagne", "Sainte-Foy-Tarentaise", "Peisey-Vallandry", "Villaroger",
+      "Séez", "Montvalezan", "Haute-Tarentaise"
     ],
     "address": {
       "@type": "PostalAddress",
@@ -73,348 +74,443 @@
 </head>
 <body>
 
-  <!-- Barre supérieure -->
   <div class="topbar">
     <div class="container">
       <div class="badges">
-        <span>🕐 Disponible 7j/7 &amp; 24h/24</span>
+        <span>🕐 <b>7j/7 — 24h/24</b></span>
         <span>📍 Gare SNCF de Bourg-Saint-Maurice</span>
       </div>
       <div><a href="tel:+33767676981">☎ 07 67 67 69 81</a></div>
     </div>
   </div>
 
-  <!-- En-tête -->
   <header class="header">
     <nav class="nav">
       <a href="index.html" class="logo">
-        <span class="mark">🚕</span>
-        <span>ASM TAXI<small>Taxi Bourg-Saint-Maurice — Gare SNCF</small></span>
+        <span class="mark">ASM</span>
+        <span class="name">ASM Taxi<small>Bourg-Saint-Maurice — Gare SNCF</small></span>
       </a>
       <div class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a href="stations.html">Destinations &amp; tarifs</a>
         <a href="#services">Services</a>
-        <a href="#destinations">Destinations</a>
-        <a href="#zones">Zones</a>
         <a href="#avis">Avis</a>
-        <a href="#faq">FAQ</a>
-        <a href="#devis">Devis</a>
+        <a href="#devis">Réservation</a>
       </div>
       <div class="nav-cta">
-        <a href="tel:+33767676981" class="btn btn-outline">☎ Appeler</a>
-        <a href="#devis" class="btn btn-primary">Devis gratuit</a>
+        <a href="tel:+33767676981" class="btn btn-line">☎ Appeler</a>
+        <a href="#devis" class="btn btn-gold">Devis gratuit</a>
       </div>
       <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
     </nav>
   </header>
 
-  <!-- Hero -->
+  <!-- ================= HERO ================= -->
   <section class="hero">
     <div class="container">
-      <span class="hero-badge">✦ Votre taxi de confiance en Haute-Tarentaise</span>
-      <h1>Taxi &amp; navettes au départ de Bourg-Saint-Maurice</h1>
-      <p class="lead">Transferts vers les aéroports de Genève, Lyon, Chambéry et Grenoble, et navettes vers toutes les stations : Les Arcs, La Plagne, Val d'Isère, Tignes… Ponctuel, confortable, 7j/7.</p>
+      <div class="hero-eyebrow">Taxi — Gare de Bourg-Saint-Maurice</div>
+      <h1>Votre taxi en <span class="gold">Haute-Tarentaise</span>,<br />de la gare aux sommets</h1>
+      <p class="lead">Navettes vers toutes les stations — La Rosière, Les Arcs, Val d'Isère, Tignes, La Plagne — et transferts privés vers les aéroports de Genève, Lyon, Chambéry et Grenoble. 7j/7, 24h/24, hiver comme été.</p>
       <div class="hero-actions">
-        <a href="#devis" class="btn btn-primary btn-lg">Demander un devis gratuit</a>
-        <a href="tel:+33767676981" class="btn btn-ghost btn-lg">☎ 07 67 67 69 81</a>
+        <a href="#devis" class="btn btn-gold btn-lg">Réserver mon taxi</a>
+        <a href="stations.html" class="btn btn-line btn-lg">Destinations &amp; tarifs</a>
       </div>
       <div class="hero-stats">
-        <div class="stat"><b>7j/7</b><span>Disponible jour &amp; nuit</span></div>
-        <div class="stat"><b>100%</b><span>Ponctualité garantie</span></div>
-        <div class="stat"><b>1&nbsp;à&nbsp;8</b><span>Passagers &amp; bagages</span></div>
+        <div class="stat"><b>24h/24</b><span>Jour, nuit &amp; jours fériés</span></div>
+        <div class="stat"><b>22</b><span>Destinations documentées</span></div>
+        <div class="stat"><b>1 → 8</b><span>Passagers, skis &amp; bagages</span></div>
+        <div class="stat"><b>100%</b><span>Prix ferme avant départ</span></div>
       </div>
     </div>
-    <!-- Montagnes en SVG (aucune image externe, chargement instantané) -->
-    <svg class="hero-mountains" viewBox="0 0 1440 220" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path fill="#0d1b2a" fill-opacity="0.55" d="M0,220 L0,120 L180,40 L320,120 L480,20 L640,120 L820,60 L1000,130 L1180,50 L1320,120 L1440,80 L1440,220 Z"/>
-      <path fill="#f7fafc" d="M0,220 L0,170 L200,110 L360,175 L520,95 L700,180 L900,120 L1080,185 L1260,125 L1440,180 L1440,220 Z"/>
+    <svg class="hero-mountains" viewBox="0 0 1440 190" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill="none" stroke="#c9a45c" stroke-width="1.2" stroke-opacity="0.5" d="M0,150 L170,60 L300,130 L470,30 L640,130 L830,70 L1010,140 L1190,55 L1330,120 L1440,85" />
+      <path fill="#faf8f3" d="M0,190 L0,160 L200,105 L360,168 L520,92 L700,172 L900,118 L1080,178 L1260,120 L1440,172 L1440,190 Z" />
     </svg>
   </section>
 
-  <!-- Services -->
-  <section id="services">
-    <div class="container">
-      <div class="section-head">
-        <div class="kicker">Nos prestations</div>
-        <h2>Un service de taxi complet en Haute-Tarentaise</h2>
-        <p>Que vous arriviez en avion, en train ou que vous partiez skier, on vous emmène à destination en toute sérénité.</p>
-      </div>
-      <div class="grid grid-3">
-        <div class="card">
-          <div class="ico">✈️</div>
-          <h3>Transferts aéroports</h3>
-          <p>Genève, Lyon-Saint-Exupéry, Chambéry, Grenoble et Annecy. On suit votre vol pour s'adapter aux retards, et on vous attend à l'arrivée avec votre nom.</p>
-        </div>
-        <div class="card">
-          <div class="ico">🏔️</div>
-          <h3>Navettes stations</h3>
-          <p>Les Arcs, La Plagne, Val d'Isère, Tignes, Sainte-Foy, La Rosière, Peisey-Vallandry. Dépose au pied des pistes, coffre pour skis et bagages.</p>
-        </div>
-        <div class="card">
-          <div class="ico">🚉</div>
-          <h3>Gares TGV</h3>
-          <p>Liaison avec la gare de Bourg-Saint-Maurice, Moûtiers-Salins et Albertville. Idéal pour les correspondances train + station.</p>
-        </div>
-        <div class="card">
-          <div class="ico">🏥</div>
-          <h3>Transport médical</h3>
-          <p>Trajets vers les hôpitaux et cabinets (Albertville, Chambéry). Véhicule confortable et chauffeur attentionné.</p>
-        </div>
-        <div class="card">
-          <div class="ico">🍾</div>
-          <h3>Trajets soirées &amp; événements</h3>
-          <p>Restaurants, mariages, événements en station. Rentrez en toute sécurité, à toute heure de la nuit.</p>
-        </div>
-        <div class="card">
-          <div class="ico">📦</div>
-          <h3>Courses &amp; toutes distances</h3>
-          <p>Petites courses locales comme longues distances partout en France. Un devis clair, sans surprise, avant le départ.</p>
-        </div>
-      </div>
+  <!-- ================= MARQUEE ================= -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-inner">
+      <span>La Rosière</span>✦<span>Les Arcs 1600</span>✦<span>Les Arcs 1800</span>✦<span>Les Arcs 1950</span>✦<span>Les Arcs 2000</span>✦<span>Val d'Isère</span>✦<span>Tignes</span>✦<span>La Plagne</span>✦<span>Peisey-Vallandry</span>✦<span>Sainte-Foy</span>✦<span>Genève</span>✦<span>Lyon</span>✦<span>Chambéry</span>✦<span>Grenoble</span>✦
+      <span>La Rosière</span>✦<span>Les Arcs 1600</span>✦<span>Les Arcs 1800</span>✦<span>Les Arcs 1950</span>✦<span>Les Arcs 2000</span>✦<span>Val d'Isère</span>✦<span>Tignes</span>✦<span>La Plagne</span>✦<span>Peisey-Vallandry</span>✦<span>Sainte-Foy</span>✦<span>Genève</span>✦<span>Lyon</span>✦<span>Chambéry</span>✦<span>Grenoble</span>✦
     </div>
-  </section>
+  </div>
 
-  <!-- Destinations -->
-  <section id="destinations" class="bg-soft">
+  <!-- ================= DESTINATIONS ================= -->
+  <section id="destinations">
     <div class="container">
-      <div class="section-head">
-        <div class="kicker">Nos trajets phares</div>
-        <h2>Transferts aéroports &amp; longues distances</h2>
-        <p>Nos destinations les plus demandées au départ de Bourg-Saint-Maurice. Cliquez pour les détails et un tarif indicatif.</p>
+      <div class="section-head center">
+        <div class="kicker">Une page dédiée par trajet</div>
+        <h2>Destinations &amp; tarifs</h2>
+        <div class="rule center"></div>
+        <p>Cliquez sur votre destination : trajet détaillé depuis la gare de Bourg-Saint-Maurice, tarifs jour/nuit et conseils pratiques.</p>
       </div>
       <div class="grid grid-4">
-        <a href="destinations/geneve.html" class="dest">
-          <div><div class="tag">N°1 demandé</div><h3>Aéroport de Genève</h3></div>
-          <div class="price">≈ 2h30 • à partir de 260&nbsp;€</div>
+        <a href="destinations/geneve.html" class="dest-card">
+          <span class="tag">N°1 demandé</span><span class="go">→</span>
+          <div><h3>Aéroport de Genève</h3><div class="meta">2 h 30 • dès 450 €</div></div>
         </a>
-        <a href="destinations/lyon.html" class="dest">
-          <div><div class="tag">Aéroport</div><h3>Lyon-Saint-Exupéry</h3></div>
-          <div class="price">≈ 2h15 • à partir de 250&nbsp;€</div>
+        <a href="destinations/la-rosiere.html" class="dest-card">
+          <span class="tag">Espace San Bernardo</span><span class="go">→</span>
+          <div><h3>La Rosière</h3><div class="meta">30 min • dès 90 €</div></div>
         </a>
-        <a href="destinations/chambery.html" class="dest">
-          <div><div class="tag">Aéroport &amp; gare</div><h3>Chambéry</h3></div>
-          <div class="price">≈ 1h30 • à partir de 180&nbsp;€</div>
+        <a href="destinations/les-arcs-1800.html" class="dest-card">
+          <span class="tag">Paradiski</span><span class="go">→</span>
+          <div><h3>Les Arcs 1800</h3><div class="meta">25 min • dès 70 €</div></div>
         </a>
-        <a href="destinations/grenoble.html" class="dest">
-          <div><div class="tag">Aéroport &amp; ville</div><h3>Grenoble</h3></div>
-          <div class="price">≈ 2h00 • à partir de 230&nbsp;€</div>
+        <a href="destinations/val-disere.html" class="dest-card">
+          <span class="tag">Légendaire</span><span class="go">→</span>
+          <div><h3>Val d'Isère</h3><div class="meta">55 min • dès 120 €</div></div>
+        </a>
+        <a href="destinations/tignes.html" class="dest-card">
+          <span class="tag">Glacier</span><span class="go">→</span>
+          <div><h3>Tignes</h3><div class="meta">45 min • dès 110 €</div></div>
+        </a>
+        <a href="destinations/la-plagne.html" class="dest-card">
+          <span class="tag">11 villages</span><span class="go">→</span>
+          <div><h3>La Plagne</h3><div class="meta">45 min • dès 110 €</div></div>
+        </a>
+        <a href="destinations/lyon.html" class="dest-card">
+          <span class="tag">Aéroport + TGV</span><span class="go">→</span>
+          <div><h3>Lyon-Saint-Exupéry</h3><div class="meta">2 h 15 • dès 540 €</div></div>
+        </a>
+        <a href="destinations/chambery.html" class="dest-card">
+          <span class="tag">Le plus proche</span><span class="go">→</span>
+          <div><h3>Chambéry</h3><div class="meta">1 h 30 • dès 350 €</div></div>
         </a>
       </div>
-      <div style="text-align:center; margin-top:26px;">
-        <a href="destinations/stations.html" class="btn btn-outline btn-lg">🏔️ Voir les navettes vers les stations</a>
+      <div style="text-align:center; margin-top:30px;">
+        <a href="stations.html" class="btn btn-dark btn-lg">Voir les 22 destinations &amp; tous les tarifs</a>
       </div>
     </div>
   </section>
 
-  <!-- Zones desservies -->
-  <section id="zones">
+  <!-- ================= SERVICES ================= -->
+  <section id="services" class="bg-white">
     <div class="container">
-      <div class="section-head">
-        <div class="kicker">Secteur d'intervention</div>
-        <h2>Les stations &amp; villes que nous desservons</h2>
-        <p>Au départ de Bourg-Saint-Maurice, nous rayonnons dans toute la Haute-Tarentaise et au-delà.</p>
+      <div class="section-head center">
+        <div class="kicker">Nos prestations</div>
+        <h2>Un service complet, hiver comme été</h2>
+        <div class="rule center"></div>
       </div>
-      <div class="zones">
-        <span class="zone-chip">Les Arcs 1600 / 1800 / 1950 / 2000</span>
-        <span class="zone-chip">La Plagne</span>
-        <span class="zone-chip">Val d'Isère</span>
-        <span class="zone-chip">Tignes</span>
-        <span class="zone-chip">Sainte-Foy-Tarentaise</span>
-        <span class="zone-chip">La Rosière</span>
-        <span class="zone-chip">Peisey-Vallandry</span>
-        <span class="zone-chip">Villaroger</span>
-        <span class="zone-chip">Séez</span>
-        <span class="zone-chip">Montvalezan</span>
-        <span class="zone-chip">Aime-la-Plagne</span>
-        <span class="zone-chip">Moûtiers</span>
+      <div class="grid grid-3">
+        <div class="card"><div class="ico">🚉</div><h3>Navettes gare ⇄ stations</h3><p>Basés à la gare TGV de Bourg-Saint-Maurice, nous vous attendons à quai, panneau à votre nom, et vous déposons devant votre résidence — même pour le dernier train.</p></div>
+        <div class="card"><div class="ico">✈️</div><h3>Transferts aéroports</h3><p>Genève, Lyon, Chambéry, Grenoble, Annecy. Suivi de vol en temps réel, retards absorbés sans supplément, dépose au bon terminal.</p></div>
+        <div class="card"><div class="ico">🏔️</div><h3>Liaisons inter-stations</h3><p>D'une station à l'autre pour retrouver des amis, changer de domaine ou rejoindre un événement : Paradiski, Espace San Bernardo, Tignes-Val d'Isère.</p></div>
+        <div class="card"><div class="ico">🏥</div><h3>Transport médical</h3><p>Hôpitaux et cabinets d'Albertville, Moûtiers, Chambéry, Grenoble. Attente possible sur place et retour à domicile, en toute discrétion.</p></div>
+        <div class="card"><div class="ico">🥾</div><h3>Été : rando &amp; vélo</h3><p>Dépose aux départs de randonnées (Tour du Mont-Blanc, Vanoise), récupérations en fin d'étape, transferts vélo avec matériel.</p></div>
+        <div class="card"><div class="ico">🍾</div><h3>Soirées &amp; événements</h3><p>Restaurants d'altitude, mariages, séminaires : profitez, on conduit. Disponible en soirée et la nuit, dans toute la Tarentaise.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- Pourquoi nous -->
-  <section class="bg-nuit">
-    <div class="container">
-      <div class="section-head">
-        <div class="kicker">Pourquoi nous choisir</div>
-        <h2>La tranquillité d'esprit, de la réservation à l'arrivée</h2>
-      </div>
-      <div class="features">
-        <div class="feature"><div class="check">⏱️</div><div><h3>Ponctualité garantie</h3><p>On arrive en avance et on suit votre vol/train en temps réel pour s'adapter aux imprévus.</p></div></div>
-        <div class="feature"><div class="check">💶</div><div><h3>Tarifs clairs &amp; fixes</h3><p>Un prix annoncé et confirmé avant le départ, sans mauvaise surprise à l'arrivée.</p></div></div>
-        <div class="feature"><div class="check">🚐</div><div><h3>Véhicule confortable</h3><p>Berline / van spacieux, coffre pour skis, snowboards et bagages, jusqu'à 8 passagers.</p></div></div>
-        <div class="feature"><div class="check">🗣️</div><div><h3>Chauffeur local</h3><p>Une parfaite connaissance des routes de montagne et des conditions hivernales.</p></div></div>
-        <div class="feature"><div class="check">❄️</div><div><h3>Équipé montagne</h3><p>Pneus hiver, chaînes, véhicule préparé pour rouler en toute sécurité par tous les temps.</p></div></div>
-        <div class="feature"><div class="check">💳</div><div><h3>Paiement facile</h3><p>Carte bancaire, espèces, factures pour vos notes de frais professionnelles.</p></div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Comment ça marche -->
+  <!-- ================= PARTENAIRES ================= -->
   <section>
     <div class="container">
+      <div class="section-head center">
+        <div class="kicker">Au cœur des plus grands domaines</div>
+        <h2>ASM Taxi, le taxi des stations</h2>
+        <div class="rule center"></div>
+      </div>
+      <div class="partners-grid">
+        <!-- Tuiles typographiques (remplaçables par les logos officiels de vos partenaires) -->
+        <div class="partner" title="La Rosière — Espace San Bernardo">
+          <svg viewBox="0 0 160 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="La Rosière">
+            <circle cx="80" cy="14" r="6" fill="#d6336c"/>
+            <text x="80" y="38" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="19" fill="#232326">la Rosière</text>
+            <text x="80" y="52" text-anchor="middle" font-family="Arial" font-size="7.5" letter-spacing="2" fill="#8a8a92">ESPACE SAN BERNARDO</text>
+          </svg>
+        </div>
+        <div class="partner" title="Les Arcs">
+          <svg viewBox="0 0 160 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Les Arcs">
+            <path d="M52 22 Q80 2 108 22" fill="none" stroke="#e03131" stroke-width="3"/>
+            <text x="80" y="40" text-anchor="middle" font-family="Arial Black, Arial" font-size="17" fill="#232326">LES ARCS</text>
+            <text x="80" y="52" text-anchor="middle" font-family="Arial" font-size="7.5" letter-spacing="2" fill="#8a8a92">1600 · 1800 · 1950 · 2000</text>
+          </svg>
+        </div>
+        <div class="partner" title="Val d'Isère">
+          <svg viewBox="0 0 160 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Val d'Isère">
+            <path d="M73 8 L80 20 L87 8 L80 13 Z" fill="#232326"/>
+            <text x="80" y="40" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#232326">Val d'Isère</text>
+            <text x="80" y="52" text-anchor="middle" font-family="Arial" font-size="7.5" letter-spacing="3" fill="#8a8a92">SAVOIE · 1850</text>
+          </svg>
+        </div>
+        <div class="partner" title="Tignes">
+          <svg viewBox="0 0 160 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tignes">
+            <text x="80" y="36" text-anchor="middle" font-family="Arial Black, Arial" font-size="21" letter-spacing="2" fill="#1864ab">TIGNES</text>
+            <path d="M56 44 L88 44 L82 50 L104 50" fill="none" stroke="#1864ab" stroke-width="2.5"/>
+          </svg>
+        </div>
+        <div class="partner" title="La Plagne">
+          <svg viewBox="0 0 160 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="La Plagne">
+            <circle cx="80" cy="15" r="7" fill="#f08c00"/>
+            <text x="80" y="40" text-anchor="middle" font-family="Verdana, Arial" font-weight="bold" font-size="16" fill="#232326">la plagne</text>
+            <text x="80" y="52" text-anchor="middle" font-family="Arial" font-size="7.5" letter-spacing="2" fill="#8a8a92">ALTITUDE 1250 – 3250</text>
+          </svg>
+        </div>
+        <div class="partner" title="Sainte-Foy-Tarentaise">
+          <svg viewBox="0 0 160 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sainte-Foy">
+            <text x="70" y="37" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#0b7285">sainte<tspan font-weight="bold">✻</tspan>foy</text>
+            <text x="80" y="51" text-anchor="middle" font-family="Arial" font-size="7.5" letter-spacing="3" fill="#8a8a92">TARENTAISE</text>
+          </svg>
+        </div>
+        <div class="partner" title="Peisey-Vallandry — Paradiski">
+          <svg viewBox="0 0 160 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Peisey-Vallandry">
+            <text x="80" y="32" text-anchor="middle" font-family="Comic Sans MS, cursive" font-size="14" font-weight="bold" fill="#e8590c">peisey-vallandry</text>
+            <text x="80" y="50" text-anchor="middle" font-family="Arial" font-size="8" letter-spacing="2" fill="#8a8a92">PARADISKI</text>
+          </svg>
+        </div>
+        <div class="partner" title="Paradiski — 425 km de pistes">
+          <svg viewBox="0 0 160 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Paradiski">
+            <text x="72" y="36" text-anchor="middle" font-family="Arial Black, Arial" font-size="15" fill="#232326">paradiski</text>
+            <text x="120" y="30" text-anchor="middle" font-size="14" fill="#5c7cfa">❄</text>
+            <text x="80" y="51" text-anchor="middle" font-family="Arial" font-size="6.2" letter-spacing="0.4" fill="#8a8a92">LES ARCS · PEISEY-VALLANDRY · LA PLAGNE</text>
+          </svg>
+        </div>
+        <div class="partner" title="Espace San Bernardo — France / Italie">
+          <svg viewBox="0 0 160 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Espace San Bernardo">
+            <path d="M60 20 L74 8 L88 20" fill="none" stroke="#2b8a3e" stroke-width="2.5"/>
+            <path d="M78 20 L92 10 L104 20" fill="none" stroke="#c92a2a" stroke-width="2.5"/>
+            <text x="80" y="40" text-anchor="middle" font-family="Trebuchet MS, Arial" font-weight="bold" font-size="12.5" fill="#232326">SAN BERNARDO</text>
+            <text x="80" y="52" text-anchor="middle" font-family="Arial" font-size="7.5" letter-spacing="2" fill="#8a8a92">FRANCE ⇄ ITALIE</text>
+          </svg>
+        </div>
+        <div class="partner" title="Parc national de la Vanoise">
+          <svg viewBox="0 0 160 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Vanoise">
+            <path d="M62 22 L74 10 L82 18 L92 6 L104 22" fill="none" stroke="#2f9e44" stroke-width="2.5"/>
+            <text x="80" y="40" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#232326">Vanoise</text>
+            <text x="80" y="52" text-anchor="middle" font-family="Arial" font-size="7.5" letter-spacing="2" fill="#8a8a92">PARC NATIONAL</text>
+          </svg>
+        </div>
+        <div class="partner" title="Bourg-Saint-Maurice — Les Arcs">
+          <svg viewBox="0 0 160 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bourg-Saint-Maurice">
+            <text x="80" y="26" text-anchor="middle" font-family="Brush Script MT, cursive" font-size="17" fill="#232326">Bourg Saint Maurice</text>
+            <path d="M60 36 L72 30 L80 36 L92 28 L102 36" fill="none" stroke="#232326" stroke-width="2"/>
+            <text x="80" y="52" text-anchor="middle" font-family="Arial" font-size="7.5" letter-spacing="3" fill="#8a8a92">HAUTE-TARENTAISE</text>
+          </svg>
+        </div>
+        <div class="partner" title="Col du Petit-Saint-Bernard">
+          <svg viewBox="0 0 160 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Petit-Saint-Bernard">
+            <circle cx="80" cy="13" r="5" fill="none" stroke="#845ef7" stroke-width="2"/>
+            <text x="80" y="37" text-anchor="middle" font-family="Trebuchet MS, Arial" font-weight="bold" font-size="12" fill="#232326">PETIT-SAINT-BERNARD</text>
+            <text x="80" y="51" text-anchor="middle" font-family="Arial" font-size="7.5" letter-spacing="2" fill="#8a8a92">COL · 2188 M</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= POURQUOI NOUS ================= -->
+  <section class="bg-dark">
+    <div class="container">
       <div class="section-head">
+        <div class="kicker">Pourquoi ASM Taxi</div>
+        <h2>L'exigence d'un service privé, l'âme d'un taxi de pays</h2>
+        <div class="rule"></div>
+      </div>
+      <div class="features">
+        <div class="feature"><div class="check">⏱</div><div><h3>Ponctualité absolue</h3><p>Nous partons toujours avec la marge nécessaire — trafic du samedi, neige et douane compris.</p></div></div>
+        <div class="feature"><div class="check">📡</div><div><h3>Suivi vols &amp; trains</h3><p>Votre avion ou TGV est suivi en temps réel : l'heure de prise en charge s'ajuste, sans frais.</p></div></div>
+        <div class="feature"><div class="check">💶</div><div><h3>Prix ferme avant départ</h3><p>Le tarif annoncé au devis est le tarif payé. Aucune surprise, jamais.</p></div></div>
+        <div class="feature"><div class="check">🏔</div><div><h3>Chauffeur local</h3><p>Basé à la gare de Bourg-Saint-Maurice : chaque lacet, chaque résidence, chaque raccourci.</p></div></div>
+        <div class="feature"><div class="check">❄</div><div><h3>Équipement montagne</h3><p>Pneus hiver, chaînes, conduite neige : on monte quand les autres renoncent.</p></div></div>
+        <div class="feature"><div class="check">💳</div><div><h3>Paiement simple</h3><p>Carte bancaire, espèces, facture fournie pour vos notes de frais professionnelles.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= VÉHICULES ================= -->
+  <section class="bg-dark" style="padding-top:0;">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">Nos véhicules</div>
+        <h2>Confort &amp; capacité, du solo au groupe</h2>
+        <div class="rule"></div>
+      </div>
+      <div class="vehicules">
+        <div class="vehicule">
+          <h3>Berline confort</h3>
+          <p>Pour 1 à 4 passagers : sièges confortables, coffre skis et bagages, eau à bord, chargeurs. Idéale pour les transferts aéroport en couple ou petite famille.</p>
+          <span class="cap">1 – 4 passagers · bagages &amp; skis</span>
+        </div>
+        <div class="vehicule">
+          <h3>Van grande capacité</h3>
+          <p>Pour 5 à 8 passagers : familles nombreuses, groupes d'amis, matériel volumineux. Sièges enfants et réhausseurs sur demande, sans supplément.</p>
+          <span class="cap">5 – 8 passagers · coffre XXL</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ÉTAPES ================= -->
+  <section>
+    <div class="container">
+      <div class="section-head center">
         <div class="kicker">Simple &amp; rapide</div>
-        <h2>Réserver votre taxi en 3 étapes</h2>
+        <h2>Réservez en 3 étapes</h2>
+        <div class="rule center"></div>
       </div>
       <div class="steps">
-        <div class="step"><div class="num">1</div><h3>Demandez un devis</h3><p>Par téléphone, WhatsApp ou via le formulaire ci-dessous. Réponse rapide avec un prix ferme.</p></div>
-        <div class="step"><div class="num">2</div><h3>On confirme</h3><p>On valide ensemble l'heure et le point de rendez-vous. Vous recevez une confirmation.</p></div>
-        <div class="step"><div class="num">3</div><h3>On vous emmène</h3><p>Le chauffeur arrive à l'heure et vous conduit à destination, en toute sérénité.</p></div>
+        <div class="step"><h3>Demandez votre devis</h3><p>Téléphone, WhatsApp ou formulaire : indiquez trajet, date et nombre de passagers. Réponse rapide, prix ferme.</p></div>
+        <div class="step"><h3>On confirme tout</h3><p>Horaire, point de rendez-vous, suivi de votre vol ou train : vous recevez une confirmation claire.</p></div>
+        <div class="step"><h3>Voyagez l'esprit libre</h3><p>Votre chauffeur vous attend, charge les bagages et vous dépose à destination. C'est tout.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- Avis -->
-  <section id="avis" class="bg-soft">
+  <!-- ================= AVIS ================= -->
+  <section id="avis" class="bg-white">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head center">
         <div class="kicker">Ils nous font confiance</div>
-        <h2>Les avis de nos clients</h2>
+        <h2>Avis de nos clients</h2>
+        <div class="rule center"></div>
       </div>
       <div class="reviews">
-        <div class="review"><div class="stars">★★★★★</div><p>« Transfert vers l'aéroport de Genève parfait. Chauffeur ponctuel, route en sécurité malgré la neige. Je recommande à 100%. »</p><div class="who">Julien M.<span>Val d'Isère → Genève</span></div></div>
-        <div class="review"><div class="stars">★★★★★</div><p>« Navette pour Les Arcs impeccable, prix annoncé respecté. Très pratique avec les enfants et tous les bagages de ski. »</p><div class="who">Sophie L.<span>Bourg-Saint-Maurice → Les Arcs 1800</span></div></div>
-        <div class="review"><div class="stars">★★★★★</div><p>« Réservation simple, chauffeur sympathique et très professionnel. On a suivi mon vol en retard sans problème. »</p><div class="who">Marc D.<span>Lyon-Saint-Exupéry → Tignes</span></div></div>
+        <div class="review"><div class="stars">★★★★★</div><p>Transfert Val d'Isère → Genève impeccable : chauffeur à l'heure malgré la neige, conduite rassurante, prix annoncé respecté. Je recommande sans hésiter.</p><div class="who">Julien M.<span>Val d'Isère → Aéroport de Genève</span></div></div>
+        <div class="review"><div class="stars">★★★★★</div><p>Arrivée en TGV à Bourg-Saint-Maurice avec 3 enfants et 8 valises… Prise en charge parfaite à quai et dépose devant la résidence à La Rosière. Merci !</p><div class="who">Sophie L.<span>Gare BSM → La Rosière</span></div></div>
+        <div class="review"><div class="stars">★★★★★</div><p>Vol retardé de 2 h à Lyon : le chauffeur nous attendait quand même, souriant. Voilà ce qu'on appelle un service sérieux.</p><div class="who">Marc D.<span>Lyon-Saint-Exupéry → Tignes</span></div></div>
       </div>
     </div>
   </section>
 
-  <!-- Devis -->
-  <section id="devis" class="bg-nuit">
+  <!-- ================= DEVIS ================= -->
+  <section id="devis" class="bg-dark">
     <div class="container">
       <div class="devis-wrap">
-        <div class="devis-info">
-          <div class="kicker" style="color:var(--ambre);font-weight:700;text-transform:uppercase;letter-spacing:0.08em;font-size:0.85rem;">Devis gratuit</div>
-          <h2>Demandez votre tarif en 1 minute</h2>
-          <p>Indiquez votre trajet et vos dates, on vous répond rapidement avec un prix ferme. Pour une réservation urgente, appelez-nous directement.</p>
-          <div class="contact-line"><span class="ico">☎</span><div><b><a href="tel:+33767676981">07 67 67 69 81</a></b><br><span style="color:var(--glace);font-size:0.9rem;">7j/7 — jour &amp; nuit</span></div></div>
-          <div class="contact-line"><span class="ico">💬</span><div><b><a href="https://wa.me/33767676981" target="_blank" rel="noopener">WhatsApp</a></b><br><span style="color:var(--glace);font-size:0.9rem;">Envoyez-nous votre trajet</span></div></div>
-          <div class="contact-line"><span class="ico">📧</span><div><b><a href="mailto:asm.taxi73@gmail.com">asm.taxi73@gmail.com</a></b><br><span style="color:var(--glace);font-size:0.9rem;">Réponse sous quelques heures</span></div></div>
-          <div class="contact-line"><span class="ico">📍</span><div><b>Gare SNCF — Bourg-Saint-Maurice (73700)</b><br><span style="color:var(--glace);font-size:0.9rem;">&amp; toute la Haute-Tarentaise</span></div></div>
+        <div>
+          <div class="kicker">Réservation &amp; devis</div>
+          <h2>Votre tarif en moins d'une minute</h2>
+          <div class="rule"></div>
+          <p style="margin-top:18px;">Indiquez votre trajet : nous répondons rapidement avec un prix ferme. Pour une course immédiate, appelez-nous directement — nous sommes à la gare.</p>
+          <div class="contact-line"><span class="ico">☎</span><div><b><a href="tel:+33767676981">07 67 67 69 81</a></b><span>7j/7 — 24h/24</span></div></div>
+          <div class="contact-line"><span class="ico">💬</span><div><b><a href="https://wa.me/33767676981" target="_blank" rel="noopener">WhatsApp</a></b><span>Envoyez votre trajet, réponse rapide</span></div></div>
+          <div class="contact-line"><span class="ico">📧</span><div><b><a href="mailto:asm.taxi73@gmail.com">asm.taxi73@gmail.com</a></b><span>Devis écrit sous quelques heures</span></div></div>
+          <div class="contact-line"><span class="ico">📍</span><div><b>Gare SNCF — Bourg-Saint-Maurice</b><span>73700 · Haute-Tarentaise · Savoie</span></div></div>
         </div>
-
         <div>
           <form class="form-card" id="devis-form" action="#" data-email="asm.taxi73@gmail.com">
-            <h3>Formulaire de devis</h3>
-            <p class="muted">Tous les champs marqués * sont obligatoires.</p>
+            <h3>Demande de devis gratuit</h3>
+            <p class="muted">Réponse rapide — sans engagement.</p>
             <div class="field-row">
               <div class="field"><label for="nom">Nom *</label><input type="text" id="nom" name="nom" required placeholder="Votre nom" /></div>
               <div class="field"><label for="tel">Téléphone *</label><input type="tel" id="tel" name="tel" required placeholder="06 12 34 56 78" /></div>
             </div>
             <div class="field"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="vous@email.com" /></div>
             <div class="field-row">
-              <div class="field"><label for="depart">Départ *</label><input type="text" id="depart" name="depart" required placeholder="Bourg-Saint-Maurice, Les Arcs…" /></div>
-              <div class="field"><label for="destination">Destination *</label><input type="text" id="destination" name="destination" required placeholder="Aéroport de Genève…" /></div>
+              <div class="field"><label for="depart">Départ *</label><input type="text" id="depart" name="depart" required placeholder="Gare de Bourg-Saint-Maurice…" /></div>
+              <div class="field"><label for="destination">Destination *</label><input type="text" id="destination" name="destination" required placeholder="La Rosière, Genève…" /></div>
             </div>
             <div class="field-row">
               <div class="field"><label for="date">Date *</label><input type="date" id="date" name="date" required /></div>
               <div class="field"><label for="heure">Heure</label><input type="time" id="heure" name="heure" /></div>
             </div>
             <div class="field">
-              <label for="passagers">Nombre de passagers</label>
+              <label for="passagers">Passagers</label>
               <select id="passagers" name="passagers">
                 <option>1</option><option>2</option><option>3</option><option>4</option>
                 <option>5</option><option>6</option><option>7</option><option>8</option>
               </select>
             </div>
-            <div class="field"><label for="message">Message (bagages, vol, précisions…)</label><textarea id="message" name="message" rows="3" placeholder="N° de vol, skis, siège enfant…"></textarea></div>
-            <button type="submit" class="btn btn-primary btn-block btn-lg">Envoyer ma demande</button>
-            <p class="form-note">Réponse rapide • Sans engagement • Données non partagées</p>
+            <div class="field"><label for="message">Précisions (vol, train, skis, sièges enfants…)</label><textarea id="message" name="message" rows="3" placeholder="N° de vol ou de train, bagages spéciaux…"></textarea></div>
+            <button type="submit" class="btn btn-gold btn-block btn-lg">Envoyer ma demande</button>
+            <p class="form-note">Réponse rapide • Prix ferme • Données confidentielles</p>
           </form>
-          <div class="form-success">✅ Merci ! Votre messagerie va s'ouvrir pour envoyer la demande. Vous pouvez aussi nous appeler au 07 67 67 69 81.</div>
+          <div class="form-success">✅ Merci ! Votre messagerie va s'ouvrir pour envoyer la demande. Urgence ? Appelez le 07 67 67 69 81.</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FAQ -->
+  <!-- ================= FAQ ================= -->
   <section id="faq">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head center">
         <div class="kicker">Questions fréquentes</div>
         <h2>Tout ce qu'il faut savoir</h2>
+        <div class="rule center"></div>
       </div>
       <div class="faq">
-        <div class="faq-item"><button class="faq-q">Combien coûte un transfert vers l'aéroport de Genève ?</button><div class="faq-a"><p>Le tarif dépend de la station de départ et de l'horaire. À titre indicatif, comptez à partir de 260&nbsp;€ depuis Bourg-Saint-Maurice. Demandez un devis gratuit pour un prix ferme adapté à votre trajet.</p></div></div>
-        <div class="faq-item"><button class="faq-q">Prenez-vous en charge les bagages et le matériel de ski ?</button><div class="faq-a"><p>Oui, nos véhicules disposent d'un grand coffre pour vos valises, skis, snowboards et poussettes. Précisez-le lors de la réservation pour qu'on adapte le véhicule.</p></div></div>
-        <div class="faq-item"><button class="faq-q">Que se passe-t-il si mon vol ou mon train a du retard ?</button><div class="faq-a"><p>Nous suivons votre vol et votre train en temps réel. En cas de retard, nous adaptons l'heure de prise en charge sans frais supplémentaires — vous n'avez rien à gérer.</p></div></div>
-        <div class="faq-item"><button class="faq-q">Peut-on réserver pour un groupe ou une famille ?</button><div class="faq-a"><p>Oui, nous transportons de 1 à 8 passagers selon le véhicule. Pour les groupes plus importants, contactez-nous : nous organisons plusieurs véhicules.</p></div></div>
-        <div class="faq-item"><button class="faq-q">Comment payer la course ?</button><div class="faq-a"><p>Par carte bancaire, en espèces, et nous fournissons une facture pour vos notes de frais professionnelles. Le paiement se fait à la fin de la course.</p></div></div>
-        <div class="faq-item"><button class="faq-q">Êtes-vous disponible la nuit et les jours fériés ?</button><div class="faq-a"><p>Oui, nous sommes disponibles 7j/7, y compris la nuit, les week-ends et jours fériés. Réservez à l'avance pour garantir votre créneau en haute saison.</p></div></div>
+        <div class="faq-item"><button class="faq-q">Où vous trouver à la gare de Bourg-Saint-Maurice ?</button><div class="faq-a"><p>Nous sommes basés à la gare SNCF : sur réservation, votre chauffeur vous attend à quai ou devant la gare, panneau à votre nom. Sans réservation, appelez le 07 67 67 69 81 — nous sommes à deux minutes.</p></div></div>
+        <div class="faq-item"><button class="faq-q">Combien coûte un taxi vers ma station ?</button><div class="faq-a"><p>Chaque destination a sa page avec les tarifs jour/nuit : consultez <a href="stations.html"><strong>Destinations &amp; tarifs</strong></a>. À titre d'exemple : La Rosière dès 90 €, Les Arcs 1800 dès 70 €, Val d'Isère dès 120 € (1-4 passagers, jour).</p></div></div>
+        <div class="faq-item"><button class="faq-q">Que se passe-t-il si mon train ou mon vol a du retard ?</button><div class="faq-a"><p>Nous suivons votre vol et votre train en temps réel : l'heure de prise en charge s'ajuste automatiquement, sans frais supplémentaires.</p></div></div>
+        <div class="faq-item"><button class="faq-q">Transportez-vous les skis, snowboards et poussettes ?</button><div class="faq-a"><p>Oui, nos véhicules sont équipés pour le matériel de montagne. Précisez votre équipement à la réservation pour que nous prévoyions le bon véhicule.</p></div></div>
+        <div class="faq-item"><button class="faq-q">Peut-on réserver pour un groupe de plus de 4 personnes ?</button><div class="faq-a"><p>Oui, notre van accueille jusqu'à 8 passagers avec bagages. Au-delà, nous organisons plusieurs véhicules — demandez un devis groupe.</p></div></div>
+        <div class="faq-item"><button class="faq-q">Roulez-vous la nuit, les dimanches et jours fériés ?</button><div class="faq-a"><p>Oui, 7j/7 et 24h/24 sur réservation. Le tarif de nuit s'applique de 19 h à 7 h ainsi que les dimanches et jours fériés.</p></div></div>
       </div>
     </div>
   </section>
 
-  <!-- Données structurées FAQ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {"@type":"Question","name":"Combien coûte un transfert vers l'aéroport de Genève ?","acceptedAnswer":{"@type":"Answer","text":"Le tarif dépend de la station de départ et de l'horaire. Comptez à partir de 260 € depuis Bourg-Saint-Maurice. Demandez un devis gratuit pour un prix ferme."}},
-      {"@type":"Question","name":"Prenez-vous en charge les bagages et le matériel de ski ?","acceptedAnswer":{"@type":"Answer","text":"Oui, nos véhicules disposent d'un grand coffre pour valises, skis, snowboards et poussettes."}},
-      {"@type":"Question","name":"Que se passe-t-il si mon vol ou mon train a du retard ?","acceptedAnswer":{"@type":"Answer","text":"Nous suivons votre vol et votre train en temps réel et adaptons l'heure de prise en charge sans frais supplémentaires."}},
-      {"@type":"Question","name":"Comment payer la course ?","acceptedAnswer":{"@type":"Answer","text":"Par carte bancaire, en espèces, avec facture possible pour vos notes de frais."}},
-      {"@type":"Question","name":"Êtes-vous disponible la nuit et les jours fériés ?","acceptedAnswer":{"@type":"Answer","text":"Oui, nous sommes disponibles 7j/7, y compris la nuit, les week-ends et jours fériés."}}
+      {"@type":"Question","name":"Où vous trouver à la gare de Bourg-Saint-Maurice ?","acceptedAnswer":{"@type":"Answer","text":"Nous sommes basés à la gare SNCF : sur réservation, votre chauffeur vous attend à quai ou devant la gare, panneau à votre nom."}},
+      {"@type":"Question","name":"Combien coûte un taxi vers ma station ?","acceptedAnswer":{"@type":"Answer","text":"Chaque destination a sa page avec les tarifs jour/nuit. Exemples : La Rosière dès 90 €, Les Arcs 1800 dès 70 €, Val d'Isère dès 120 € (1-4 passagers, jour)."}},
+      {"@type":"Question","name":"Que se passe-t-il si mon train ou mon vol a du retard ?","acceptedAnswer":{"@type":"Answer","text":"Nous suivons votre vol et votre train en temps réel : l'heure de prise en charge s'ajuste automatiquement, sans frais supplémentaires."}},
+      {"@type":"Question","name":"Transportez-vous les skis et le matériel ?","acceptedAnswer":{"@type":"Answer","text":"Oui, nos véhicules sont équipés pour skis, snowboards et bagages volumineux."}},
+      {"@type":"Question","name":"Roulez-vous la nuit et les jours fériés ?","acceptedAnswer":{"@type":"Answer","text":"Oui, 7j/7 et 24h/24 sur réservation. Tarif de nuit de 19 h à 7 h, dimanches et jours fériés."}}
     ]
   }
   </script>
 
-  <!-- Bandeau CTA -->
-  <section>
+  <!-- ================= CTA ================= -->
+  <section style="padding-top:0;">
     <div class="container">
       <div class="cta-band">
-        <h2>Besoin d'un taxi maintenant ?</h2>
-        <p>Appelez-nous directement, on s'occupe de tout.</p>
+        <h2>Un taxi, maintenant ou pour cet hiver ?</h2>
+        <p>Appelez-nous ou réservez en ligne — nous nous occupons du reste.</p>
         <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
-          <a href="tel:+33767676981" class="btn btn-outline btn-lg">☎ 07 67 67 69 81</a>
-          <a href="https://wa.me/33767676981" target="_blank" rel="noopener" class="btn btn-outline btn-lg">💬 WhatsApp</a>
+          <a href="tel:+33767676981" class="btn btn-dark btn-lg">☎ 07 67 67 69 81</a>
+          <a href="https://wa.me/33767676981" target="_blank" rel="noopener" class="btn btn-dark btn-lg">💬 WhatsApp</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Pied de page -->
+  <!-- ================= FOOTER ================= -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div>
-          <div class="logo"><span class="mark">🚕</span><span>ASM TAXI</span></div>
-          <p>Votre taxi de confiance en Haute-Tarentaise. Transferts aéroports, gares et navettes vers toutes les stations, 7j/7.</p>
+          <a href="index.html" class="logo">
+            <span class="mark">ASM</span>
+            <span class="name">ASM Taxi<small>Bourg-Saint-Maurice — Gare SNCF</small></span>
+          </a>
+          <p>Votre taxi basé à la gare SNCF de Bourg-Saint-Maurice. Transferts aéroports, navettes stations et courses locales en Haute-Tarentaise, 7j/7, hiver comme été.</p>
         </div>
         <div>
-          <h4>Destinations</h4>
+          <h4>Stations</h4>
+          <a href="destinations/la-rosiere.html">Taxi La Rosière</a>
+          <a href="destinations/les-arcs-1800.html">Taxi Les Arcs</a>
+          <a href="destinations/val-disere.html">Taxi Val d'Isère</a>
+          <a href="destinations/tignes.html">Taxi Tignes</a>
+          <a href="destinations/la-plagne.html">Taxi La Plagne</a>
+          <a href="stations.html">Toutes les destinations →</a>
+        </div>
+        <div>
+          <h4>Aéroports &amp; gares</h4>
           <a href="destinations/geneve.html">Aéroport de Genève</a>
           <a href="destinations/lyon.html">Aéroport de Lyon</a>
           <a href="destinations/chambery.html">Chambéry</a>
-          <a href="destinations/grenoble.html">Grenoble</a>
-          <a href="destinations/stations.html">Navettes stations</a>
-        </div>
-        <div>
-          <h4>Liens</h4>
-          <a href="#services">Nos services</a>
-          <a href="#zones">Zones desservies</a>
-          <a href="#avis">Avis clients</a>
-          <a href="#faq">FAQ</a>
-          <a href="#devis">Devis gratuit</a>
+          <a href="destinations/grenoble.html">Aéroport de Grenoble</a>
+          <a href="destinations/moutiers.html">Gare de Moûtiers</a>
         </div>
         <div>
           <h4>Contact</h4>
           <a href="tel:+33767676981">☎ 07 67 67 69 81</a>
           <a href="https://wa.me/33767676981" target="_blank" rel="noopener">💬 WhatsApp</a>
           <a href="mailto:asm.taxi73@gmail.com">📧 asm.taxi73@gmail.com</a>
-          <a>📍 Gare SNCF, Bourg-Saint-Maurice (73700)</a>
+          <a>📍 Gare SNCF, 73700 Bourg-Saint-Maurice</a>
         </div>
       </div>
-      <div class="footer-bottom">
-        © <span class="js-year">2026</span> ASM TAXI — Tous droits réservés ·
-        <a href="#services">Transferts aéroports</a> · <a href="#destinations">Navettes stations Tarentaise</a>
-      </div>
+      <div class="footer-bottom">© <span class="js-year">2026</span> ASM TAXI — Taxi Bourg-Saint-Maurice — Tous droits réservés</div>
     </div>
   </footer>
 
-  <!-- Boutons flottants mobile -->
   <div class="floating">
-    <a href="tel:+33767676981" class="btn btn-primary">☎ Appeler</a>
+    <a href="tel:+33767676981" class="btn btn-gold">☎ Appeler</a>
     <a href="https://wa.me/33767676981" target="_blank" rel="noopener" class="btn btn-wa">💬 WhatsApp</a>
   </div>
 

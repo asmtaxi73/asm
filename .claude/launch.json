@@ -6,6 +6,12 @@
       "runtimeExecutable": "node",
       "runtimeArgs": [".claude/serve.mjs"],
       "port": 4321
+    },
+    {
+      "name": "preview-modifs",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["/private/tmp/claude-501/-Users-macbook-Desktop-taxi/5f8634dd-2095-44ec-8bf6-d56114f19896/scratchpad/preview/.claude/serve.mjs"],
+      "port": 4173
     }
   ]
 }

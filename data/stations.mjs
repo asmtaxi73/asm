@@ -18,7 +18,7 @@ export const STATIONS = [
     km: "22 km",
     gare14: 90,
     supplement: 40,
-    metaTitle: "Taxi La Rosière ⇄ Gare de Bourg-Saint-Maurice | ASM TAXI",
+    metaTitle: "Taxi & VTC La Rosière ⇄ Gare de Bourg-Saint-Maurice | ASM TAXI",
     metaDesc: "Taxi entre la gare de Bourg-Saint-Maurice et La Rosière (Espace San Bernardo) : transfert privé 7j/7, skis et bagages, tarifs jour/nuit. Aussi depuis Genève, Lyon, Chambéry. ☎ 07 67 67 69 81",
     intro: [
       "Vous arrivez en TGV à la gare de Bourg-Saint-Maurice et vous cherchez un <strong>taxi pour La Rosière</strong> ? ASM TAXI vous conduit en 30 minutes environ jusqu'à la station, directement devant votre chalet, votre résidence ou les remontées mécaniques.",
@@ -52,7 +52,7 @@ export const STATIONS = [
     km: "12 km",
     gare14: 60,
     supplement: 25,
-    metaTitle: "Taxi Les Arcs 1600 ⇄ Gare de Bourg-Saint-Maurice | ASM TAXI",
+    metaTitle: "Taxi & VTC Les Arcs 1600 ⇄ Gare de Bourg-Saint-Maurice | ASM TAXI",
     metaDesc: "Taxi entre la gare de Bourg-Saint-Maurice et Les Arcs 1600 (Arc Pierre Blanche) : transfert privé 7j/7, plus souple que le funiculaire, dépose devant votre résidence. ☎ 07 67 67 69 81",
     intro: [
       "Village historique des Arcs relié à Bourg-Saint-Maurice par le funiculaire, <strong>Arc 1600</strong> se rejoint aussi très simplement en taxi : 20 minutes de route et vous êtes déposé directement devant votre résidence, avec tous vos bagages.",
@@ -86,7 +86,7 @@ export const STATIONS = [
     km: "15 km",
     gare14: 70,
     supplement: 30,
-    metaTitle: "Taxi Les Arcs 1800 ⇄ Gare de Bourg-Saint-Maurice | ASM TAXI",
+    metaTitle: "Taxi & VTC Les Arcs 1800 ⇄ Gare de Bourg-Saint-Maurice | ASM TAXI",
     metaDesc: "Taxi entre la gare de Bourg-Saint-Maurice et Les Arcs 1800 : transfert privé 7j/7 vers Charvet, Villards, Charmettoger, Chantel. Skis et bagages bienvenus. ☎ 07 67 67 69 81",
     intro: [
       "Cœur battant des Arcs, <strong>Arc 1800</strong> concentre commerces, résidences et départs de pistes vers l'immense domaine Paradiski. Depuis la gare TGV de Bourg-Saint-Maurice, ASM TAXI vous y conduit en 25 minutes environ.",
@@ -120,7 +120,7 @@ export const STATIONS = [
     km: "17 km",
     gare14: 80,
     supplement: 35,
-    metaTitle: "Taxi Les Arcs 1950 ⇄ Gare de Bourg-Saint-Maurice | ASM TAXI",
+    metaTitle: "Taxi & VTC Les Arcs 1950 ⇄ Gare de Bourg-Saint-Maurice | ASM TAXI",
     metaDesc: "Taxi entre la gare de Bourg-Saint-Maurice et Arc 1950 le Village : transfert privé haut de gamme 7j/7, dépose au plus près de votre résidence. ☎ 07 67 67 69 81",
     intro: [
       "Village piéton au charme soigné, <strong>Arc 1950</strong> mérite une arrivée à la hauteur : ASM TAXI vous dépose à l'entrée du village, bagages pris en charge, après 30 minutes de route panoramique depuis la gare de Bourg-Saint-Maurice.",
@@ -154,7 +154,7 @@ export const STATIONS = [
     km: "18 km",
     gare14: 85,
     supplement: 40,
-    metaTitle: "Taxi Les Arcs 2000 ⇄ Gare de Bourg-Saint-Maurice | ASM TAXI",
+    metaTitle: "Taxi & VTC Les Arcs 2000 ⇄ Gare de Bourg-Saint-Maurice | ASM TAXI",
     metaDesc: "Taxi entre la gare de Bourg-Saint-Maurice et Les Arcs 2000 : transfert privé 7j/7 au pied de l'Aiguille Rouge, véhicule équipé neige. ☎ 07 67 67 69 81",
     intro: [
       "Au pied de l'Aiguille Rouge et de ses 3 226 m, <strong>Arc 2000</strong> est le point culminant du domaine des Arcs. ASM TAXI relie la gare TGV de Bourg-Saint-Maurice à la station en 35 minutes environ, quelles que soient les conditions.",
@@ -188,7 +188,7 @@ export const STATIONS = [
     km: "14 km",
     gare14: 70,
     supplement: 30,
-    metaTitle: "Taxi Peisey-Vallandry ⇄ Gare de Bourg-Saint-Maurice | ASM TAXI",
+    metaTitle: "Taxi & VTC Peisey-Vallandry ⇄ Gare de Bourg-Saint-Maurice | ASM TAXI",
     metaDesc: "Taxi entre la gare de Bourg-Saint-Maurice et Peisey-Vallandry (Vanoise Express) : transfert privé 7j/7 vers Plan Peisey, Vallandry, Peisey-Nancroix. ☎ 07 67 67 69 81",
     intro: [
       "Entre Les Arcs et La Plagne, au départ du spectaculaire <strong>Vanoise Express</strong>, Peisey-Vallandry combine villages authentiques et accès direct aux 425 km de pistes de Paradiski. Depuis la gare de Bourg-Saint-Maurice, comptez 25 minutes de taxi.",
@@ -222,7 +222,7 @@ export const STATIONS = [
     km: "32 km",
     gare14: 110,
     supplement: 60,
-    metaTitle: "Taxi La Plagne ⇄ Gare de Bourg-Saint-Maurice | ASM TAXI",
+    metaTitle: "Taxi & VTC La Plagne ⇄ Gare de Bourg-Saint-Maurice | ASM TAXI",
     metaDesc: "Taxi entre Bourg-Saint-Maurice et La Plagne (11 villages, Paradiski) : transfert privé 7j/7 vers Plagne Centre, Belle Plagne, Montchavin, Champagny… ☎ 07 67 67 69 81",
     intro: [
       "Avec ses <strong>11 villages</strong> étagés de 1 250 à 2 100 m, La Plagne est l'un des plus grands terrains de jeu des Alpes. ASM TAXI dessert chacun d'eux depuis la gare de Bourg-Saint-Maurice ou la gare d'Aime-la-Plagne, en 35 à 50 minutes selon le village.",
@@ -247,6 +247,40 @@ export const STATIONS = [
   },
 
   {
+    slug: "courchevel",
+    name: "Courchevel",
+    tag: "Les 3 Vallées",
+    kind: "station",
+    altitude: "1 850 m",
+    duree: "1 h 05",
+    km: "50 km",
+    gare14: 160,
+    supplement: 30,
+    metaTitle: "Taxi & VTC Courchevel ⇄ Bourg-Saint-Maurice | ASM TAXI",
+    metaDesc: "Taxi et VTC entre Bourg-Saint-Maurice, la gare de Moûtiers et Courchevel (Les 3 Vallées) : transfert privé 7j/7, skis et bagages, tarifs jour/nuit. Aussi depuis Genève, Lyon, Chambéry. ☎ 07 67 67 69 81",
+    intro: [
+      "Station emblématique des <strong>3 Vallées</strong>, le plus grand domaine skiable du monde, Courchevel s'étage de 1 300 à 1 850 m d'altitude. ASM TAXI vous y conduit depuis la gare de Bourg-Saint-Maurice, la gare TGV de Moûtiers ou directement depuis les aéroports.",
+      "Du Praz à Courchevel 1850, chaque niveau de la station a son ambiance : nous vous déposons devant votre hôtel, votre chalet ou les remontées mécaniques, quel que soit le quartier."
+    ],
+    points: [
+      "Prise en charge à la gare de Bourg-Saint-Maurice ou de Moûtiers",
+      "Dépose devant votre hôtel ou chalet, du Praz à Courchevel 1850",
+      "Coffre équipé pour skis, snowboards et bagages volumineux",
+      "Liaisons avec toutes les stations de Tarentaise pendant votre séjour"
+    ],
+    savoir: [
+      { h3: "Le trajet Bourg-Saint-Maurice → Courchevel", p: "Comptez environ 1 h 05 pour 50 km : la vallée jusqu'à Moûtiers puis la montée par Saint-Bon vers les niveaux de Courchevel. Les samedis d'hiver, la circulation en vallée peut rallonger le trajet : nous partons toujours avec la marge nécessaire." },
+      { h3: "Arrivée en TGV : Moûtiers ou Bourg-Saint-Maurice ?", p: "La gare de Moûtiers-Salins est la plus proche de Courchevel (25 minutes environ). Nous assurons vos transferts depuis les deux gares — indiquez simplement votre train à la réservation." }
+    ],
+    faq: [
+      { q: "Combien coûte un taxi de Bourg-Saint-Maurice à Courchevel ?", a: "À partir de 160 € en journée hors saison d'hiver pour 1 à 4 passagers (tarif indicatif). Demandez votre devis gratuit : le prix ferme est confirmé avant le départ." },
+      { q: "Desservez-vous tous les niveaux de Courchevel ?", a: "Oui : Courchevel 1850, Moriond 1650, Le Village 1550, Le Praz et La Tania. Nous vous déposons à l'adresse exacte de votre séjour." },
+      { q: "Peut-on réserver un transfert Courchevel → aéroport de Genève ?", a: "Bien sûr : comptez à partir de 480 € en journée (1-4 passagers), avec suivi de votre vol et horaire de départ adapté à la circulation." }
+    ],
+    proches: ["la-plagne", "aime-la-plagne", "moutiers", "peisey-vallandry"]
+  },
+
+  {
     slug: "sainte-foy-tarentaise",
     name: "Sainte-Foy-Tarentaise",
     tag: "Station village",
@@ -256,7 +290,7 @@ export const STATIONS = [
     km: "20 km",
     gare14: 85,
     supplement: 45,
-    metaTitle: "Taxi Sainte-Foy-Tarentaise ⇄ Bourg-Saint-Maurice | ASM TAXI",
+    metaTitle: "Taxi & VTC Sainte-Foy-Tarentaise ⇄ Bourg-Saint-Maurice | ASM TAXI",
     metaDesc: "Taxi entre la gare de Bourg-Saint-Maurice et Sainte-Foy-Tarentaise : transfert privé 7j/7 vers la station et les hameaux (Le Miroir, La Masure, Le Monal). ☎ 07 67 67 69 81",
     intro: [
       "Confidentielle et préservée, <strong>Sainte-Foy-Tarentaise</strong> cultive un ski loin des foules et des villages classés parmi les plus beaux de Savoie. ASM TAXI vous y conduit en 30 minutes depuis la gare de Bourg-Saint-Maurice.",
@@ -290,7 +324,7 @@ export const STATIONS = [
     km: "12 km",
     gare14: 60,
     supplement: 30,
-    metaTitle: "Taxi Villaroger ⇄ Gare de Bourg-Saint-Maurice | ASM TAXI",
+    metaTitle: "Taxi & VTC Villaroger ⇄ Gare de Bourg-Saint-Maurice | ASM TAXI",
     metaDesc: "Taxi entre la gare de Bourg-Saint-Maurice et Villaroger : transfert privé 7j/7 vers le village et la télécabine, accès discret au domaine des Arcs. ☎ 07 67 67 69 81",
     intro: [
       "Village authentique accroché au versant sauvage du domaine des Arcs, <strong>Villaroger</strong> offre un accès discret aux pistes par sa télécabine, loin de l'agitation des grandes stations. En taxi, vous y êtes en 20 minutes depuis la gare de Bourg-Saint-Maurice.",
@@ -324,7 +358,7 @@ export const STATIONS = [
     km: "30 km",
     gare14: 110,
     supplement: 75,
-    metaTitle: "Taxi Tignes ⇄ Gare de Bourg-Saint-Maurice | ASM TAXI",
+    metaTitle: "Taxi & VTC Tignes ⇄ Gare de Bourg-Saint-Maurice | ASM TAXI",
     metaDesc: "Taxi entre la gare de Bourg-Saint-Maurice et Tignes (Val Claret, Le Lac, Le Lavachet, Les Boisses, Les Brévières) : transfert privé 7j/7. ☎ 07 67 67 69 81",
     intro: [
       "Temple du ski d'altitude et du freestyle, <strong>Tignes</strong> skie d'octobre à mai sur le glacier de la Grande Motte. Depuis la gare de Bourg-Saint-Maurice — son terminus TGV le plus proche — ASM TAXI vous monte à la station en 45 minutes environ.",
@@ -358,7 +392,7 @@ export const STATIONS = [
     km: "32 km",
     gare14: 120,
     supplement: 85,
-    metaTitle: "Taxi Val d'Isère ⇄ Gare de Bourg-Saint-Maurice | ASM TAXI",
+    metaTitle: "Taxi & VTC Val d'Isère ⇄ Gare de Bourg-Saint-Maurice | ASM TAXI",
     metaDesc: "Taxi entre la gare de Bourg-Saint-Maurice et Val d'Isère : transfert privé haut de gamme 7j/7 vers le village, La Daille, Le Fornet. Suivi TGV et vols. ☎ 07 67 67 69 81",
     intro: [
       "Station légendaire, hôte de la Coupe du monde et berceau de champions, <strong>Val d'Isère</strong> mérite un transfert à la hauteur de sa réputation. ASM TAXI relie la gare TGV de Bourg-Saint-Maurice au village en 55 minutes environ, avec le soin d'un service privé.",
@@ -392,7 +426,7 @@ export const STATIONS = [
     km: "4 km",
     gare14: 25,
     supplement: 10,
-    metaTitle: "Taxi Séez ⇄ Gare de Bourg-Saint-Maurice | ASM TAXI",
+    metaTitle: "Taxi & VTC Séez ⇄ Gare de Bourg-Saint-Maurice | ASM TAXI",
     metaDesc: "Taxi entre la gare de Bourg-Saint-Maurice et Séez : courses locales 7j/7, liaisons La Rosière, aéroports et gares. ☎ 07 67 67 69 81",
     intro: [
       "Aux portes de Bourg-Saint-Maurice, sur la route du col du Petit-Saint-Bernard, <strong>Séez</strong> est le premier village de la montée vers La Rosière. ASM TAXI y assure vos courses locales en quelques minutes depuis la gare.",
@@ -426,7 +460,7 @@ export const STATIONS = [
     km: "12 km",
     gare14: 65,
     supplement: 35,
-    metaTitle: "Taxi Montvalezan ⇄ Gare de Bourg-Saint-Maurice | ASM TAXI",
+    metaTitle: "Taxi & VTC Montvalezan ⇄ Gare de Bourg-Saint-Maurice | ASM TAXI",
     metaDesc: "Taxi entre la gare de Bourg-Saint-Maurice et Montvalezan : transfert privé 7j/7 vers le village et ses hameaux, liaison La Rosière. ☎ 07 67 67 69 81",
     intro: [
       "Commune-balcon dominant la vallée de la Haute-Tarentaise, <strong>Montvalezan</strong> égrène ses hameaux ensoleillés sur la route de La Rosière — dont la station fait d'ailleurs partie. ASM TAXI dessert chaque hameau en 20 minutes environ depuis la gare de Bourg-Saint-Maurice.",
@@ -460,7 +494,7 @@ export const STATIONS = [
     km: "20 km",
     gare14: 95,
     supplement: 60,
-    metaTitle: "Taxi Les Chapieux ⇄ Bourg-Saint-Maurice | Tour du Mont-Blanc | ASM TAXI",
+    metaTitle: "Taxi & VTC Les Chapieux ⇄ Bourg-Saint-Maurice | Tour du Mont-Blanc | ASM TAXI",
     metaDesc: "Taxi entre la gare de Bourg-Saint-Maurice et Les Chapieux (vallée des Glaciers) : dépose randonneurs Tour du Mont-Blanc, refuges, cols. Été. ☎ 07 67 67 69 81",
     intro: [
       "Étape mythique du <strong>Tour du Mont-Blanc</strong>, le hameau des Chapieux se niche au fond de la vallée des Glaciers, au pied du col de la Seigne et du Cormet de Roselend. L'été, ASM TAXI y dépose randonneurs et trailers en 40 minutes depuis la gare de Bourg-Saint-Maurice.",
@@ -494,7 +528,7 @@ export const STATIONS = [
     km: "13 km",
     gare14: 45,
     supplement: -10,
-    metaTitle: "Taxi Aime-la-Plagne ⇄ Bourg-Saint-Maurice | ASM TAXI",
+    metaTitle: "Taxi & VTC Aime-la-Plagne ⇄ Bourg-Saint-Maurice | ASM TAXI",
     metaDesc: "Taxi à Aime-la-Plagne : liaisons gare d'Aime, gare de Bourg-Saint-Maurice, montées vers La Plagne, transferts aéroports. 7j/7. ☎ 07 67 67 69 81",
     intro: [
       "Bourg actif de la vallée et porte d'entrée de La Plagne, <strong>Aime-la-Plagne</strong> dispose de sa propre gare TGV. ASM TAXI y assure les liaisons locales, les montées en station et les transferts aéroports, en complément de notre base de Bourg-Saint-Maurice.",

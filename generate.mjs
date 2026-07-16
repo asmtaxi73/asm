@@ -47,7 +47,7 @@ const HUB_ROWS = ["geneve", "lyon", "grenoble", "chambery"];
 const STATION_ROWS = [
   "la-rosiere", "les-arcs-1600", "les-arcs-1800", "les-arcs-1950",
   "les-arcs-2000", "peisey-vallandry", "sainte-foy-tarentaise",
-  "villaroger", "tignes", "val-disere", "la-plagne",
+  "villaroger", "tignes", "val-disere", "la-plagne", "courchevel",
 ];
 
 const hubBySlug = Object.fromEntries(HUBS.map((h) => [h.slug, h]));
@@ -90,7 +90,7 @@ function jsonLd(d) {
   const serviceLd = {
     "@context": "https://schema.org",
     "@type": "Service",
-    serviceType: `Taxi ${d.name} — transfert privé`,
+    serviceType: `Taxi & VTC ${d.name} — transfert privé`,
     provider: {
       "@type": "TaxiService",
       name: SITE.name,
@@ -163,15 +163,16 @@ const footer = (prefix) => `
             <span class="mark">ASM</span>
             <span class="name">ASM Taxi<small>Bourg-Saint-Maurice — Gare SNCF</small></span>
           </a>
-          <p>Votre taxi basé à la gare SNCF de Bourg-Saint-Maurice. Transferts aéroports, navettes stations et courses locales en Haute-Tarentaise, 7j/7, hiver comme été.</p>
+          <p>Taxi à Bourg-Saint-Maurice (basé à la gare SNCF) et VTC au départ de toutes les stations, gares et aéroports. Transferts, navettes stations et courses locales en Haute-Tarentaise, 7j/7, hiver comme été.</p>
         </div>
         <div>
           <h4>Stations</h4>
-          <a href="${prefix}destinations/la-rosiere.html">Taxi La Rosière</a>
-          <a href="${prefix}destinations/les-arcs-1800.html">Taxi Les Arcs</a>
-          <a href="${prefix}destinations/val-disere.html">Taxi Val d'Isère</a>
-          <a href="${prefix}destinations/tignes.html">Taxi Tignes</a>
-          <a href="${prefix}destinations/la-plagne.html">Taxi La Plagne</a>
+          <a href="${prefix}destinations/la-rosiere.html">Taxi &amp; VTC La Rosière</a>
+          <a href="${prefix}destinations/les-arcs-1800.html">Taxi &amp; VTC Les Arcs</a>
+          <a href="${prefix}destinations/val-disere.html">Taxi &amp; VTC Val d'Isère</a>
+          <a href="${prefix}destinations/tignes.html">Taxi &amp; VTC Tignes</a>
+          <a href="${prefix}destinations/la-plagne.html">Taxi &amp; VTC La Plagne</a>
+          <a href="${prefix}destinations/courchevel.html">Taxi &amp; VTC Courchevel</a>
           <a href="${prefix}stations.html">Toutes les destinations →</a>
         </div>
         <div>
@@ -225,23 +226,23 @@ function priceTables(d, rows) {
   return `
       <div class="price-table-wrap">
         <table class="price-table">
-          <caption>☀️ Tarifs jour (7h – 19h) — à partir de</caption>
-          <thead><tr><th>Départ ou arrivée ${d.name}</th><th>1 à 4 passagers</th><th>5 à 8 passagers</th></tr></thead>
-          <tbody>
-          ${tableRows(rows, "d")}
-          </tbody>
-        </table>
-      </div>
-      <div class="price-table-wrap">
-        <table class="price-table">
-          <caption>🌙 Tarifs nuit (19h – 7h), dimanches &amp; jours fériés — à partir de</caption>
+          <caption>🌙 Tarifs nuit (19h – 7h), dimanches, jours fériés &amp; saison d'hiver — à partir de</caption>
           <thead><tr><th>Départ ou arrivée ${d.name}</th><th>1 à 4 passagers</th><th>5 à 8 passagers</th></tr></thead>
           <tbody>
           ${tableRows(rows, "n")}
           </tbody>
         </table>
       </div>
-      <p class="price-note">Tarifs indicatifs « à partir de », par véhicule et par trajet, bagages et matériel de ski inclus. Le prix ferme est confirmé gratuitement à la réservation selon votre adresse exacte, l'horaire et la saison.</p>`;
+      <div class="price-table-wrap">
+        <table class="price-table">
+          <caption>☀️ Tarifs jour (7h – 19h, hors saison d'hiver) — à partir de</caption>
+          <thead><tr><th>Départ ou arrivée ${d.name}</th><th>1 à 4 passagers</th><th>5 à 8 passagers</th></tr></thead>
+          <tbody>
+          ${tableRows(rows, "d")}
+          </tbody>
+        </table>
+      </div>
+      <p class="price-note"><strong>Tous les prix sont donnés à titre indicatif</strong>, « à partir de », par véhicule et par trajet, bagages et matériel de ski inclus. <strong>Durant la période hivernale, le tarif de nuit s'applique à toutes les courses.</strong> Les samedis en période de vacances scolaires — journées de très forte affluence en Tarentaise — une majoration peut s'appliquer. Le prix ferme est confirmé gratuitement à la réservation selon votre adresse exacte, l'horaire et la saison : aucune surprise à l'arrivée.</p>`;
 }
 
 function stationPriceRows(s) {
@@ -281,7 +282,7 @@ const faqBlock = (d) => `
     <div class="container">
       <div class="section-head center">
         <div class="kicker">Questions fréquentes</div>
-        <h2>Taxi ${d.name} : vos questions</h2>
+        <h2>Taxi &amp; VTC ${d.name} : vos questions</h2>
         <div class="rule center"></div>
       </div>
       <div class="faq">
@@ -300,7 +301,7 @@ const crossLinks = (d, prefix) => `
         ${d.proches
           .map((slug) => {
             const t = allBySlug[slug];
-            return t ? `<a class="cross-link" href="${prefix}destinations/${t.slug}.html">Taxi ${t.name}</a>` : "";
+            return t ? `<a class="cross-link" href="${prefix}destinations/${t.slug}.html">Taxi &amp; VTC ${t.name}</a>` : "";
           })
           .join("\n        ")}
         <a class="cross-link" href="${prefix}stations.html">Toutes les destinations →</a>
@@ -310,7 +311,7 @@ const ctaBand = (d) => `
   <section style="padding-top:0;">
     <div class="container">
       <div class="cta-band">
-        <h2>Réservez votre taxi ${d.name}</h2>
+        <h2>Réservez votre taxi ou VTC ${d.name}</h2>
         <p>Devis gratuit, prix ferme confirmé avant le départ. Réponse rapide 7j/7.</p>
         <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
           <a href="../index.html#devis" class="btn btn-dark btn-lg">Demander un devis</a>
@@ -335,9 +336,9 @@ ${header("../")}
 
   <section class="page-hero"${heroPhoto ? ` style="--photo:url('${heroPhoto}')"` : ""}>
     <div class="container">
-      <div class="breadcrumb"><a href="../index.html">Accueil</a> › <a href="../stations.html">Destinations &amp; tarifs</a> › Taxi ${d.name}</div>
+      <div class="breadcrumb"><a href="../index.html">Accueil</a> › <a href="../stations.html">Destinations &amp; tarifs</a> › Taxi &amp; VTC ${d.name}</div>
       <div class="kicker">${d.tag}</div>
-      <h1>Taxi ${d.name}<br /><span class="gold">${isStation ? "⇄ Gare de Bourg-Saint-Maurice" : "⇄ Bourg-Saint-Maurice & stations"}</span></h1>
+      <h1>Taxi &amp; VTC ${d.name}<br /><span class="gold">${isStation ? "⇄ Gare de Bourg-Saint-Maurice" : "⇄ Bourg-Saint-Maurice & stations"}</span></h1>
       <p class="lead">${sub}</p>
       ${chips(d)}
       <div class="actions">
@@ -354,7 +355,7 @@ ${infoBand}
     <div class="container">
       <div class="content-prose">
         <div class="kicker">Votre trajet</div>
-        <h2>Taxi ${d.name} avec ASM Taxi</h2>
+        <h2>Taxi &amp; VTC ${d.name} avec ASM Taxi</h2>
         <div class="rule"></div>
         ${d.intro.map((p) => `<p>${p}</p>`).join("\n        ")}
         <ul>
@@ -369,7 +370,7 @@ ${infoBand}
     <div class="container">
       <div class="section-head">
         <div class="kicker">Tarifs</div>
-        <h2>Tarifs taxi ${d.name}</h2>
+        <h2>Tarifs taxi &amp; VTC ${d.name}</h2>
         <div class="rule"></div>
       </div>
 ${priceTables(d, rows)}

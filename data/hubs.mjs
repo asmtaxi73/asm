@@ -18,7 +18,7 @@ export const HUBS = [
     km: "165 km",
     base: 450,
     matrix: true,
-    metaTitle: "Taxi Bourg-Saint-Maurice ⇄ Aéroport de Genève | ASM TAXI",
+    metaTitle: "Taxi & VTC Bourg-Saint-Maurice ⇄ Aéroport de Genève | ASM TAXI",
     metaDesc: "Transfert taxi entre Bourg-Saint-Maurice, les stations de Tarentaise et l'aéroport de Genève (GVA) : privé, direct, suivi de vol, 7j/7. Tarifs jour/nuit toutes stations. ☎ 07 67 67 69 81",
     intro: [
       "Première porte d'entrée internationale des stations de Tarentaise, l'<strong>aéroport de Genève-Cointrin</strong> (GVA) est notre destination la plus demandée. ASM TAXI relie Bourg-Saint-Maurice et toutes les stations voisines au terminal en un trajet direct, sans arrêt ni correspondance.",
@@ -52,7 +52,7 @@ export const HUBS = [
     km: "200 km",
     base: 540,
     matrix: true,
-    metaTitle: "Taxi Bourg-Saint-Maurice ⇄ Aéroport de Lyon | ASM TAXI",
+    metaTitle: "Taxi & VTC Bourg-Saint-Maurice ⇄ Aéroport de Lyon | ASM TAXI",
     metaDesc: "Transfert taxi entre Bourg-Saint-Maurice, les stations de Tarentaise et l'aéroport Lyon-Saint-Exupéry (LYS) + gare TGV : privé, direct, suivi de vol, 7j/7. ☎ 07 67 67 69 81",
     intro: [
       "Deuxième hub des vacanciers de Tarentaise, l'<strong>aéroport Lyon-Saint-Exupéry</strong> (LYS) et sa gare TGV attenante se rejoignent en 2 h 15 environ depuis Bourg-Saint-Maurice, par un itinéraire autoroutier direct.",
@@ -86,7 +86,7 @@ export const HUBS = [
     km: "105 km",
     base: 350,
     matrix: true,
-    metaTitle: "Taxi Bourg-Saint-Maurice ⇄ Chambéry | ASM TAXI",
+    metaTitle: "Taxi & VTC Bourg-Saint-Maurice ⇄ Chambéry | ASM TAXI",
     metaDesc: "Transfert taxi entre Bourg-Saint-Maurice, les stations de Tarentaise et Chambéry : gare SNCF, aéroport Chambéry-Savoie (CMF), centre-ville. 7j/7. ☎ 07 67 67 69 81",
     intro: [
       "Préfecture de la Savoie et carrefour ferroviaire, <strong>Chambéry</strong> est la grande ville la plus proche de la Haute-Tarentaise : 1 h 30 de route environ depuis Bourg-Saint-Maurice. ASM TAXI dessert sa gare SNCF, l'aéroport Chambéry-Savoie-Mont-Blanc (CMF) et le centre-ville.",
@@ -120,7 +120,7 @@ export const HUBS = [
     km: "190 km",
     base: 540,
     matrix: true,
-    metaTitle: "Taxi Bourg-Saint-Maurice ⇄ Grenoble | ASM TAXI",
+    metaTitle: "Taxi & VTC Bourg-Saint-Maurice ⇄ Grenoble | ASM TAXI",
     metaDesc: "Transfert taxi entre Bourg-Saint-Maurice, les stations de Tarentaise et Grenoble : aéroport Grenoble-Alpes-Isère (GNB), gare, centre-ville. 7j/7. ☎ 07 67 67 69 81",
     intro: [
       "L'<strong>aéroport Grenoble-Alpes-Isère</strong> (GNB) accueille chaque hiver des dizaines de vols charter et low-cost venus du Royaume-Uni et d'Europe du Nord. ASM TAXI le relie à Bourg-Saint-Maurice et aux stations de Tarentaise en 2 h 15 environ.",
@@ -154,7 +154,7 @@ export const HUBS = [
     km: "130 km",
     base: 420,
     matrix: true,
-    metaTitle: "Taxi Bourg-Saint-Maurice ⇄ Annecy | ASM TAXI",
+    metaTitle: "Taxi & VTC Bourg-Saint-Maurice ⇄ Annecy | ASM TAXI",
     metaDesc: "Transfert taxi entre Bourg-Saint-Maurice, les stations de Tarentaise et Annecy : gare, vieille ville, lac, aéroport Annecy Mont-Blanc. 7j/7. ☎ 07 67 67 69 81",
     intro: [
       "La « Venise des Alpes » et son lac turquoise se rejoignent en 2 heures environ depuis Bourg-Saint-Maurice. ASM TAXI relie la Tarentaise à <strong>Annecy</strong> : gare, vieille ville, rives du lac et aéroport Annecy Mont-Blanc.",
@@ -188,7 +188,7 @@ export const HUBS = [
     km: "28 km",
     base: 90,
     matrix: false,
-    metaTitle: "Taxi Bourg-Saint-Maurice ⇄ Gare de Moûtiers | ASM TAXI",
+    metaTitle: "Taxi & VTC Bourg-Saint-Maurice ⇄ Gare de Moûtiers | ASM TAXI",
     metaDesc: "Taxi entre Bourg-Saint-Maurice et la gare de Moûtiers-Salins-Brides-les-Bains : correspondances TGV, liaisons vallée, 7j/7. ☎ 07 67 67 69 81",
     intro: [
       "Porte d'entrée des 3 Vallées, la <strong>gare de Moûtiers-Salins-Brides-les-Bains</strong> voit passer chaque samedi d'hiver des milliers de skieurs. À 30 minutes de Bourg-Saint-Maurice, elle offre souvent des TGV supplémentaires quand ceux de Bourg sont complets.",
@@ -222,7 +222,7 @@ export const HUBS = [
     km: "55 km",
     base: 140,
     matrix: false,
-    metaTitle: "Taxi Bourg-Saint-Maurice ⇄ Albertville | ASM TAXI",
+    metaTitle: "Taxi & VTC Bourg-Saint-Maurice ⇄ Albertville | ASM TAXI",
     metaDesc: "Taxi entre Bourg-Saint-Maurice et Albertville : hôpital, gare, centre-ville, zones commerciales. Courses médicales et privées 7j/7. ☎ 07 67 67 69 81",
     intro: [
       "Ville olympique et carrefour de la Tarentaise, du Beaufortain et du Val d'Arly, <strong>Albertville</strong> concentre les services du bassin : hôpital, gare, administrations, zones commerciales. ASM TAXI y descend en 50 minutes depuis Bourg-Saint-Maurice.",

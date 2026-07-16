@@ -17,6 +17,7 @@ export const PHOTOS = {
   "les-arcs-2000": "https://images.unsplash.com/photo-1667899984179-cdd91b51b4c4",
   "peisey-vallandry": "https://images.unsplash.com/photo-1613254838115-2a0997be5a39",
   "la-plagne": "https://images.unsplash.com/photo-1641057159535-e18d4d7c36e0",
+  "courchevel": "https://images.unsplash.com/photo-1551524559-8af4e6624178",
   "sainte-foy-tarentaise": "https://images.unsplash.com/photo-1771707685982-1fe8688f3a8f",
   "villaroger": "https://images.unsplash.com/photo-1772963352670-c40cc8dadd44",
   "tignes": "https://images.unsplash.com/photo-1649780648332-34626b90da31",

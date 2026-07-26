@@ -152,6 +152,7 @@ const header = (prefix) => `
       <div class="nav-cta">
         <a href="tel:${SITE.telIntl}" class="btn btn-line">☎ Appeler</a>
         <a href="${prefix}index.html#devis" class="btn btn-gold">Devis gratuit</a>
+        <a href="https://www-asm--taxi-fr.translate.goog/?_x_tr_sl=fr&_x_tr_tl=en&_x_tr_hl=en" class="btn btn-lang js-translate" title="Read this website in English" lang="en">🇬🇧 EN</a>
       </div>
       <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
     </nav>

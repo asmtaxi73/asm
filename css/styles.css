@@ -161,6 +161,14 @@ section { padding: 84px 0; }
 .btn-line:hover { border-color: var(--glacier-clair); color: var(--glacier-clair); }
 .btn-line-dark { background: transparent; color: var(--encre); border-color: #c9d8de; }
 .btn-line-dark:hover { border-color: var(--glacier-fonce); color: var(--glacier-fonce); }
+/* Bouton traduction anglaise (Google Translate) — même bleu que « Devis gratuit » */
+.btn-lang {
+  background: linear-gradient(135deg, var(--glacier) 0%, var(--glacier-fonce) 100%);
+  color: #fff;
+  padding: 12px 18px; font-weight: 800; letter-spacing: 0.05em; font-size: 1rem;
+  box-shadow: 0 8px 22px rgba(47, 120, 150, 0.35);
+}
+.btn-lang:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(47, 120, 150, 0.45); }
 .btn-wa { background: var(--vert-wa); color: #fff; }
 .btn-wa:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(34, 193, 94, 0.4); }
 .btn-lg { padding: 16px 32px; font-size: 1rem; }
@@ -184,18 +192,22 @@ section { padding: 84px 0; }
 }
 .hero .container { position: relative; z-index: 2; }
 .hero-eyebrow {
-  display: inline-flex; align-items: center; gap: 14px;
+  display: inline-flex; align-items: center; gap: 16px;
   background: rgba(255, 255, 255, 0.96);
   border: 1px solid rgba(159, 208, 230, 0.6);
-  border-radius: 999px; padding: 9px 14px 9px 22px;
+  border-radius: 999px; padding: 13px 20px 13px 28px;
   box-shadow: 0 8px 26px rgba(12, 24, 31, 0.35);
-  text-transform: uppercase; letter-spacing: 0.12em;
-  font-size: 0.98rem; font-weight: 800; color: var(--ardoise); margin-bottom: 26px;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  font-family: var(--font-titre); white-space: nowrap; max-width: 100%;
+  /* taille fluide : toujours sur UNE ligne, du mobile au desktop */
+  font-size: clamp(0.62rem, 2.8vw, 1.35rem);
+  font-weight: 800; color: var(--ardoise); margin-bottom: 26px;
 }
-.hero-eyebrow .sncf-logo { height: 32px; width: auto; display: block; }
+.hero-eyebrow .sncf-logo { height: clamp(24px, 6vw, 46px); width: auto; display: block; }
 @media (max-width: 560px) {
-  .hero-eyebrow { font-size: 0.78rem; gap: 10px; padding-left: 16px; }
-  .hero-eyebrow .sncf-logo { height: 24px; }
+  /* Taille proportionnelle à l'écran : le badge tient toujours sur une ligne */
+  .hero-eyebrow { letter-spacing: 0.04em; gap: 8px; padding: 9px 12px 9px 14px; font-size: 2.45vw; }
+  .hero-eyebrow .sncf-logo { height: 5vw; }
 }
 .hero h1 { color: #fff; max-width: 900px; }
 .hero h1 .gold { color: var(--glacier-clair); }

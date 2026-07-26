@@ -33,6 +33,20 @@
     });
   });
 
+  /* --- Traduction anglaise (Google Translate) ---
+     Le bouton EN ouvre la page courante du site traduite en anglais
+     via le proxy translate.goog (fonctionne sur le domaine en ligne). */
+  document.querySelectorAll(".js-translate").forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      var path = window.location.pathname;
+      if (path === "/" || path === "") path = "/index.html";
+      window.location.href =
+        "https://www-asm--taxi-fr.translate.goog" + path +
+        "?_x_tr_sl=fr&_x_tr_tl=en&_x_tr_hl=en";
+    });
+  });
+
   /* --- Année dans le pied de page --- */
   document.querySelectorAll(".js-year").forEach(function (el) {
     el.textContent = new Date().getFullYear();

@@ -29,14 +29,17 @@ const FAVICON = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' vi
 // ---------- Tarification ----------
 // Règles (indicatives, alignées marché local — à valider par ASM TAXI) :
 //  - 5 à 8 passagers : +15 € (courses locales) ou +30 € (longue distance)
-//  - Nuit (19h-7h), dimanche & jours fériés : +15 % arrondi aux 5 €
+//  - Nuit (19h-7h), dimanche & jours fériés : +15 % arrondi aux 5 €,
+//    UNIQUEMENT si le tarif jour 1-4 est ≤ 120 € — au-delà (transferts
+//    longue distance), le tarif nuit = tarif jour, sans majoration.
 const r5 = (n) => Math.round(n / 5) * 5;
 const prix = (d14) => {
   const d58 = d14 + (d14 >= 200 ? 30 : 15);
+  const sansMajoration = d14 > 120;
   return {
     d14, d58,
-    n14: r5(d14 * 1.15),
-    n58: r5(d58 * 1.15),
+    n14: sansMajoration ? d14 : r5(d14 * 1.15),
+    n58: sansMajoration ? d58 : r5(d58 * 1.15),
   };
 };
 const eur = (n) => `${n} €`;
@@ -242,7 +245,7 @@ function priceTables(d, rows) {
           </tbody>
         </table>
       </div>
-      <p class="price-note"><strong>Tous les prix sont donnés à titre indicatif</strong>, « à partir de », par véhicule et par trajet, bagages et matériel de ski inclus. <strong>Durant la période hivernale, le tarif de nuit s'applique à toutes les courses.</strong> Les samedis en période de vacances scolaires — journées de très forte affluence en Tarentaise — une majoration peut s'appliquer. Le prix ferme est confirmé gratuitement à la réservation selon votre adresse exacte, l'horaire et la saison : aucune surprise à l'arrivée.</p>`;
+      <p class="price-note"><strong>Tous les prix sont donnés à titre indicatif</strong>, « à partir de », par véhicule et par trajet, bagages et matériel de ski inclus. <strong>Bon à savoir : sur les trajets longue distance (tarif jour supérieur à 120 €), aucune majoration de nuit ni de saison — le tarif nuit est identique au tarif jour.</strong> Les samedis en période de vacances scolaires — journées de très forte affluence en Tarentaise — une majoration peut s'appliquer. Le prix ferme est confirmé gratuitement à la réservation selon votre adresse exacte, l'horaire et la saison : aucune surprise à l'arrivée.</p>`;
 }
 
 function stationPriceRows(s) {

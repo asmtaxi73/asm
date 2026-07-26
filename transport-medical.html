@@ -17,6 +17,200 @@
   <meta property="og:url" content="https://www.asm-taxi.fr/transport-medical.html" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%231f3440'/%3E%3Cpath d='M18 62 L38 38 L50 52 L64 30 L82 62 Z' fill='%234e9fc4'/%3E%3Ctext x='50' y='86' font-family='Arial' font-size='22' font-weight='bold' text-anchor='middle' fill='%23ffffff'%3EASM%3C/text%3E%3C/svg%3E" />
   <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* ============================================================
+       Page Transport médical v2 — inspirée des sites de taxis
+       conventionnés : photos réelles, gros téléphone, macaron.
+       (styles scoped : n'affecte pas le reste du site)
+       ============================================================ */
+    .page-medical {
+      --med: #0d4f9e;            /* bleu Assurance Maladie */
+      --med-fonce: #093a75;
+      --med-clair: #3d7cc4;
+      --med-ciel: #eef5fc;
+      --med-ligne: #d4e4f4;
+      --med-vert: #148a63;       /* vert « pris en charge » / carte Vitale */
+      --med-vert-fonce: #0f6b4d;
+      --med-vert-clair: #e4f4ed;
+    }
+
+    /* --- Hero photo : patient aidé à monter en voiture --- */
+    .med-hero {
+      position: relative; overflow: hidden; padding: 70px 0 78px;
+      background-image:
+        linear-gradient(100deg, rgba(7, 38, 77, 0.94) 0%, rgba(9, 58, 117, 0.86) 45%, rgba(13, 79, 158, 0.55) 100%),
+        url('https://images.unsplash.com/photo-1764173039743-c5c503f1a408?auto=format&fit=crop&w=1800&q=72');
+      background-size: cover; background-position: center right;
+    }
+    .med-hero .container { position: relative; z-index: 2; }
+    .med-hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 52px; align-items: center; }
+    .med-hero .breadcrumb { color: #9db8d8; }
+    .med-hero .breadcrumb a { color: #c8dcf5; }
+    .med-kicker {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 999px; padding: 7px 16px; font-size: 0.78rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.13em; color: #fff; margin-bottom: 20px;
+      backdrop-filter: blur(4px);
+    }
+    .med-hero h1 { color: #fff; }
+    .med-hero h1 .med-accent { color: #8fc1f7; }
+    .med-hero .lead { color: #d3e2f4; max-width: 600px; margin-top: 18px; font-size: 1.1rem; }
+    .med-checks { display: flex; gap: 10px 24px; flex-wrap: wrap; margin-top: 26px; }
+    .med-checks span { display: inline-flex; align-items: center; gap: 9px; font-weight: 600; font-size: 0.95rem; color: #eaf2fc; }
+    .med-checks .ok {
+      width: 22px; height: 22px; flex: 0 0 auto; border-radius: 50%;
+      background: var(--med-vert); color: #fff;
+      display: grid; place-items: center; font-size: 0.7rem; font-weight: 800;
+    }
+    .med-hero .actions { display: flex; gap: 13px; flex-wrap: wrap; margin-top: 30px; align-items: center; }
+    .btn-tel-big {
+      display: inline-flex; align-items: center; gap: 14px;
+      background: #fff; color: var(--med-fonce); border-radius: 16px;
+      padding: 14px 26px; font-family: var(--font-titre);
+      box-shadow: 0 14px 36px rgba(4, 22, 48, 0.45);
+      transition: var(--transition);
+    }
+    .btn-tel-big:hover { transform: translateY(-2px); box-shadow: 0 18px 44px rgba(4, 22, 48, 0.55); }
+    .btn-tel-big .ic {
+      width: 46px; height: 46px; border-radius: 12px; flex: 0 0 auto;
+      background: var(--med-vert); color: #fff; display: grid; place-items: center; font-size: 1.3rem;
+    }
+    .btn-tel-big b { display: block; font-size: 1.45rem; font-weight: 800; line-height: 1.1; letter-spacing: 0.01em; }
+    .btn-tel-big span { display: block; font-family: var(--font-texte); font-size: 0.75rem; font-weight: 600; color: var(--med); text-transform: uppercase; letter-spacing: 0.1em; }
+    .med-hero-note { color: #9db8d8; font-size: 0.78rem; margin-top: 18px; }
+
+    /* --- Carte agrément avec logo Assurance Maladie --- */
+    .med-card-agrement {
+      background: #fff; border-radius: var(--radius);
+      box-shadow: 0 30px 70px rgba(3, 18, 40, 0.5);
+      padding: 32px 30px; text-align: center; position: relative;
+    }
+    .med-card-agrement::before {
+      content: ""; position: absolute; top: 0; left: 24px; right: 24px; height: 4px;
+      border-radius: 0 0 6px 6px;
+      background: linear-gradient(90deg, var(--med), var(--med-vert));
+    }
+    .med-card-agrement .am-logo { max-width: 225px; margin: 8px auto 16px; }
+    .med-card-agrement b { display: block; font-family: var(--font-titre); font-size: 1.12rem; color: var(--encre); }
+    .med-card-agrement .cpam { color: var(--med); font-weight: 700; font-size: 0.9rem; }
+    .med-card-agrement ul { list-style: none; margin: 16px 0 0; text-align: left; border-top: 1px dashed var(--med-ligne); padding-top: 16px; }
+    .med-card-agrement li { display: flex; gap: 10px; align-items: flex-start; padding: 5px 0; font-size: 0.92rem; color: #2c4356; font-weight: 500; }
+    .med-card-agrement li .ok { width: 21px; height: 21px; flex: 0 0 auto; border-radius: 50%; background: var(--med-vert-clair); color: var(--med-vert); display: grid; place-items: center; font-size: 0.68rem; font-weight: 800; margin-top: 2px; }
+
+    /* --- Bande téléphone géante --- */
+    .med-phone-band { background: var(--med); padding: 34px 0; }
+    .med-phone-band .inner {
+      display: flex; align-items: center; justify-content: space-between; gap: 26px; flex-wrap: wrap;
+    }
+    .med-phone-band .txt b { display: block; font-family: var(--font-titre); color: #fff; font-size: 1.35rem; font-weight: 800; }
+    .med-phone-band .txt span { color: #b9d2f2; font-size: 0.95rem; }
+    .med-phone-band .nums { display: flex; gap: 14px; flex-wrap: wrap; }
+    .med-phone-num {
+      display: inline-flex; align-items: center; gap: 12px;
+      background: #fff; border-radius: 14px; padding: 12px 24px;
+      font-family: var(--font-titre); font-weight: 800; font-size: 1.5rem; color: var(--med-fonce);
+      box-shadow: 0 10px 26px rgba(4, 22, 48, 0.3); transition: var(--transition);
+    }
+    .med-phone-num:hover { transform: translateY(-2px); }
+    .med-phone-num.wa { background: var(--vert-wa); color: #fff; font-size: 1.05rem; font-weight: 700; }
+
+    /* --- Trio de cartes intro --- */
+    .med-trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .med-trio .cell {
+      background: #fff; border: 1px solid var(--med-ligne); border-radius: var(--radius);
+      padding: 30px 28px; display: flex; gap: 18px; align-items: flex-start;
+      transition: var(--transition);
+    }
+    .med-trio .cell:hover { transform: translateY(-4px); box-shadow: 0 18px 44px rgba(13, 79, 158, 0.13); }
+    .med-trio .ico {
+      width: 58px; height: 58px; border-radius: 50%; flex: 0 0 auto; font-size: 1.5rem;
+      display: grid; place-items: center; background: var(--med-ciel); color: var(--med);
+      border: 2px solid var(--med-ligne);
+    }
+    .med-trio h3 { font-size: 1.05rem; margin-bottom: 6px; }
+    .med-trio p { font-size: 0.9rem; }
+
+    /* --- Sections photo + texte alternées --- */
+    .med-split { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+    .med-split.rev .med-photo { order: 2; }
+    .med-photo { position: relative; }
+    .med-photo img {
+      width: 100%; height: 420px; object-fit: cover; border-radius: var(--radius);
+      box-shadow: var(--ombre-forte);
+    }
+    .med-photo .stamp {
+      position: absolute; right: -22px; bottom: -26px; width: 150px; height: 150px;
+      filter: drop-shadow(0 10px 24px rgba(13, 79, 158, 0.3));
+    }
+    .med-split .kicker { color: var(--med); }
+    .med-split h2 { margin: 10px 0 0; }
+    .med-split .rule { background: linear-gradient(90deg, var(--med), var(--med-vert)); }
+    .med-split p { margin: 16px 0; }
+    .med-list { list-style: none; margin: 18px 0 0; }
+    .med-list li { padding: 7px 0 7px 32px; position: relative; color: #43555f; }
+    .med-list li::before {
+      content: "✚"; position: absolute; left: 0; top: 7px; color: var(--med); font-weight: 700;
+    }
+    .med-list.verte li::before { content: "✔"; color: var(--med-vert); }
+
+    .med-highlight {
+      background: var(--med-vert-clair); border: 1px solid #bfe3d3; border-radius: var(--radius);
+      padding: 22px 26px; margin: 22px 0 0; display: flex; gap: 20px; align-items: center;
+    }
+    .med-highlight .pct { font-family: var(--font-titre); font-weight: 800; font-size: 2.1rem; color: var(--med-vert); flex: 0 0 auto; line-height: 1; }
+    .med-highlight p { margin: 0; font-size: 0.93rem; color: #1e4a3a; }
+
+    /* --- Pictos soins --- */
+    .bg-med-ciel { background: var(--med-ciel); }
+    .page-medical .kicker { color: var(--med); }
+    .page-medical .section-head .rule { background: linear-gradient(90deg, var(--med), var(--med-vert)); }
+    .med-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .med-card {
+      background: #fff; border: 1px solid var(--med-ligne); border-radius: var(--radius);
+      padding: 26px 24px; transition: var(--transition);
+    }
+    .med-card:hover { transform: translateY(-4px); box-shadow: 0 18px 44px rgba(13, 79, 158, 0.12); border-color: var(--med-clair); }
+    .med-card .ico {
+      width: 52px; height: 52px; border-radius: 14px; font-size: 1.4rem;
+      display: grid; place-items: center; margin-bottom: 14px;
+      background: var(--med-ciel); color: var(--med);
+    }
+    .med-card h3 { font-size: 1.02rem; margin-bottom: 7px; }
+    .med-card p { font-size: 0.9rem; }
+
+    /* --- Étapes & documents --- */
+    .page-medical .step::before { -webkit-text-stroke: 1.5px var(--med); }
+    .med-docs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .med-doc {
+      background: #fff; border: 1px solid var(--med-ligne); border-radius: var(--radius);
+      padding: 26px 24px; text-align: center;
+    }
+    .med-doc .ico { font-size: 1.8rem; margin-bottom: 12px; }
+    .med-doc b { display: block; font-family: var(--font-titre); font-size: 0.98rem; color: var(--encre); margin-bottom: 6px; }
+    .med-doc span { font-size: 0.87rem; color: var(--gris); }
+
+    .page-medical .faq-q::after { color: var(--med); }
+    .med-cta { background: linear-gradient(135deg, var(--med) 0%, var(--med-fonce) 100%); }
+    .med-cta .btn-dark { background: #fff; color: var(--med-fonce); border-color: #fff; }
+
+    @media (max-width: 1020px) {
+      .med-hero-grid { grid-template-columns: 1fr; gap: 38px; }
+      .med-card-agrement { max-width: 440px; margin: 0 auto; }
+      .med-trio { grid-template-columns: 1fr; }
+      .med-split { grid-template-columns: 1fr; gap: 34px; }
+      .med-split.rev .med-photo { order: 0; }
+      .med-photo img { height: 300px; }
+      .med-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .med-grid, .med-docs { grid-template-columns: 1fr; }
+      .med-highlight { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .med-phone-band .inner { justify-content: center; text-align: center; }
+      .med-photo .stamp { right: 8px; bottom: -20px; width: 118px; height: 118px; }
+      .btn-tel-big b { font-size: 1.2rem; }
+    }
+  </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -54,7 +248,7 @@
   }
   </script>
 </head>
-<body>
+<body class="page-medical">
 
   <div class="topbar">
     <div class="container">
@@ -88,105 +282,186 @@
     </nav>
   </header>
 
-  <section class="page-hero" style="--photo:url('https://images.unsplash.com/photo-1764173039743-c5c503f1a408?auto=format&fit=crop&w=1800&q=72')">
+  <!-- ============ HERO photo patient ============ -->
+  <section class="med-hero">
     <div class="container">
-      <div class="breadcrumb"><a href="index.html">Accueil</a> › Transport médical</div>
-      <div class="kicker">Taxi conventionné — Assurance Maladie</div>
-      <h1>Transport médical <span class="gold">agréé CPAM</span></h1>
-      <p class="lead">ASM Taxi est conventionné par l'Assurance Maladie : nous transportons les patients assis, sur prescription médicale, vers les hôpitaux, cliniques et cabinets de toute la région — avec facturation directe à votre caisse dans les conditions prévues.</p>
-      <div class="trip-chips">
-        <div class="trip-chip"><b>CPAM 73</b><span>Taxi conventionné</span></div>
-        <div class="trip-chip"><b>0 € *</b><span>Avance de frais</span></div>
-        <div class="trip-chip"><b>7j/7</b><span>Y compris séries</span></div>
-        <div class="trip-chip"><b>Porte à porte</b><span>Accompagnement</span></div>
-      </div>
-      <div class="actions">
-        <a href="tel:+33767676981" class="btn btn-gold btn-lg">☎ Réserver un transport</a>
-        <a href="#eligible" class="btn btn-line btn-lg">Suis-je pris en charge ?</a>
-      </div>
-      <p style="color:#93a8b3;font-size:0.78rem;margin-top:16px;">* Tiers payant dans les conditions fixées par l'Assurance Maladie — franchise de 4 € par trajet à la charge du patient (plafond 8 €/jour).</p>
-    </div>
-  </section>
-
-  <section class="bg-dark" style="padding:46px 0;">
-    <div class="container">
-      <div class="info-band">
-        <div class="info-cell"><div class="ic">🩺</div><b>Sur prescription</b><span>Bon de transport établi par votre médecin</span></div>
-        <div class="info-cell"><div class="ic">💳</div><b>Tiers payant</b><span>Facturation directe à la CPAM selon conditions</span></div>
-        <div class="info-cell"><div class="ic">🔁</div><b>Traitements en série</b><span>Dialyse, chimio, radiothérapie, rééducation</span></div>
-        <div class="info-cell"><div class="ic">🤝</div><b>Accompagnement</b><span>Aide à la montée, jusqu'au service de soins</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="content-prose">
-        <div class="kicker">Le transport assis professionnalisé</div>
-        <h2>Votre taxi conventionné en Haute-Tarentaise</h2>
-        <div class="rule"></div>
-        <p>ASM Taxi est <strong>conventionné par la Caisse Primaire d'Assurance Maladie</strong> : nous sommes agréés pour le transport assis de patients, dans un véhicule confortable, avec un chauffeur habitué à l'accompagnement des personnes malades, âgées ou à mobilité réduite (valides).</p>
-        <p>Basés à la gare de Bourg-Saint-Maurice, nous couvrons toute la Haute-Tarentaise — de Val d'Isère à Aime — et conduisons nos patients vers les établissements de santé de la région, aussi souvent que leur traitement l'exige.</p>
-
-        <h3>Nos destinations médicales habituelles</h3>
-        <ul>
-          <li>Centre hospitalier <strong>Albertville-Moûtiers</strong> (CHAM)</li>
-          <li>CH <strong>Métropole Savoie</strong> — Chambéry et cliniques associées</li>
-          <li><strong>CHU Grenoble-Alpes</strong> et centres spécialisés grenoblois</li>
-          <li>Hôpitaux et centres <strong>lyonnais</strong> (HCL, centres de lutte contre le cancer)</li>
-          <li>Centres de <strong>dialyse</strong>, <strong>radiothérapie</strong> et <strong>chimiothérapie</strong> de la région</li>
-          <li>Cabinets médicaux, kinésithérapeutes, centres de rééducation, laboratoires</li>
-        </ul>
-
-        <h3>Types de transports assurés</h3>
-        <ul>
-          <li>Consultations, examens et rendez-vous médicaux ponctuels</li>
-          <li>Entrées et sorties d'<strong>hospitalisation</strong></li>
-          <li><strong>Transports itératifs</strong> (en série) : dialyse, chimiothérapie, radiothérapie, rééducation — nous assurons la régularité de vos trajets, aller et retour, à chaque séance</li>
-          <li>Transferts entre établissements</li>
-          <li>Patients en <strong>ALD</strong> (affection de longue durée), accidents du travail, maternité</li>
-        </ul>
-
-        <h2 id="eligible">Qui a droit à la prise en charge ?</h2>
-        <p>Votre transport en taxi conventionné peut être pris en charge par l'Assurance Maladie lorsqu'un <strong>médecin le prescrit</strong> (prescription médicale de transport, établie <em>avant</em> le trajet sauf urgence ou convocation). C'est notamment le cas pour :</p>
-        <ul>
-          <li>une <strong>hospitalisation</strong> (entrée ou sortie), quelle que soit sa durée ;</li>
-          <li>les soins en lien avec une <strong>ALD</strong> lorsque votre état ne permet pas de vous déplacer seul ;</li>
-          <li>les <strong>soins répétitifs</strong> : dialyse, chimiothérapie, radiothérapie, rééducation ;</li>
-          <li>les <strong>transports en série</strong> (au moins 4 trajets de plus de 50 km sur 2 mois) — avec accord préalable de la caisse ;</li>
-          <li>les trajets de <strong>plus de 150 km</strong> — avec accord préalable de la caisse ;</li>
-          <li>les accidents du travail et maladies professionnelles, la maternité (selon conditions).</li>
-        </ul>
-        <p><strong>Taux de prise en charge :</strong> 55 % au taux standard, et <strong>100 %</strong> dans de nombreuses situations (ALD exonérante, accident du travail, maternité, Complémentaire santé solidaire…). Une <strong>franchise de 4 € par trajet</strong> (plafonnée à 8 € par jour et 50 € par an) reste à la charge du patient.</p>
-        <p><strong>Tiers payant :</strong> en taxi conventionné, vous n'avancez pas les frais — nous facturons directement votre caisse. Depuis 2025, cette dispense d'avance suppose d'accepter le <strong>transport partagé</strong> lorsque votre état de santé le permet ; en cas de refus, la caisse vous rembourse après paiement. Nous vous expliquons tout simplement lors de la réservation.</p>
-        <p style="font-size:0.88rem;color:var(--gris);">Informations générales issues des règles de l'Assurance Maladie (ameli.fr) — votre situation exacte relève de votre caisse. En cas de doute, appelez-nous : nous pratiquons ces démarches tous les jours.</p>
-
-        <h3>Les documents à préparer</h3>
-        <ul>
-          <li>La <strong>prescription médicale de transport</strong> remise par votre médecin</li>
-          <li>Votre <strong>carte Vitale</strong> (ou attestation de droits)</li>
-          <li>Le cas échéant, l'<strong>accord préalable</strong> de votre caisse (trajets +150 km, séries)</li>
-        </ul>
-        <p>C'est tout — nous nous chargeons de la télétransmission et de la facturation.</p>
+      <div class="med-hero-grid">
+        <div>
+          <div class="breadcrumb"><a href="index.html">Accueil</a> › Transport médical</div>
+          <div class="med-kicker">✚ Taxi conventionné — Assurance Maladie</div>
+          <h1>Votre transport médical <span class="med-accent">pris en charge par la CPAM</span></h1>
+          <p class="lead">Dialyse, chimiothérapie, consultations, hospitalisations : nous vous conduisons vers les hôpitaux et cabinets de toute la région, sur prescription médicale, <strong>sans avance de frais</strong> dans les conditions prévues.</p>
+          <div class="med-checks">
+            <span><i class="ok">✔</i> Tiers payant — 0 € d'avance *</span>
+            <span><i class="ok">✔</i> 7j/7, y compris trajets réguliers</span>
+            <span><i class="ok">✔</i> Accompagnement jusqu'au service</span>
+          </div>
+          <div class="actions">
+            <a href="tel:+33767676981" class="btn-tel-big">
+              <span class="ic">☎</span>
+              <span><b>07 67 67 69 81</b><span>Réservation transport médical</span></span>
+            </a>
+            <a href="#eligible" class="btn btn-line btn-lg">Suis-je pris en charge ?</a>
+          </div>
+          <p class="med-hero-note">* Tiers payant dans les conditions fixées par l'Assurance Maladie — franchise de 4 € par trajet à la charge du patient (plafond 8 €/jour).</p>
+        </div>
+        <div class="med-card-agrement">
+          <img class="am-logo" src="img/logo-assurance-maladie.svg" alt="Logo l'Assurance Maladie" width="225" height="66" />
+          <b>Véhicule conventionné</b>
+          <div class="cpam">CPAM de la Savoie (73)</div>
+          <ul>
+            <li><i class="ok">✔</i> Transport assis professionnalisé sur prescription médicale</li>
+            <li><i class="ok">✔</i> Télétransmission &amp; facturation directe à votre caisse</li>
+            <li><i class="ok">✔</i> Chauffeur habitué aux patients, personnes âgées &amp; PMR</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- ============ Bande téléphone ============ -->
+  <div class="med-phone-band">
+    <div class="container">
+      <div class="inner">
+        <div class="txt">
+          <b>Un transport médical à programmer ?</b>
+          <span>Réponse immédiate 7j/7 — nous vérifions votre prise en charge avec vous.</span>
+        </div>
+        <div class="nums">
+          <a href="tel:+33767676981" class="med-phone-num">☎ 07 67 67 69 81</a>
+          <a href="https://wa.me/33767676981" target="_blank" rel="noopener" class="med-phone-num wa">💬 WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ Trio intro ============ -->
+  <section style="padding:64px 0;">
+    <div class="container">
+      <div class="med-trio">
+        <div class="cell"><div class="ico">🏥</div><div><h3>Transport hospitalier</h3><p>Vers le CHAM, Chambéry, Grenoble, Lyon : entrées, sorties et transferts entre établissements.</p></div></div>
+        <div class="cell"><div class="ico">🚕</div><div><h3>Taxi conventionné</h3><p>Votre transport médical assis est facturé directement à l'Assurance Maladie, sur prescription.</p></div></div>
+        <div class="cell"><div class="ico">🔁</div><div><h3>Trajets réguliers</h3><p>Dialyse, chimio, radiothérapie, rééducation : mêmes horaires, même chauffeur, à chaque séance.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Section photo 1 : votre taxi conventionné ============ -->
+  <section class="bg-white">
+    <div class="container">
+      <div class="med-split">
+        <div class="med-photo">
+          <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=900&q=70" alt="Accompagnement d'un patient — transport médical assis" loading="lazy" />
+          <svg class="stamp" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="75" cy="75" r="72" fill="#ffffff"/>
+            <circle cx="75" cy="75" r="70" fill="none" stroke="#0d4f9e" stroke-width="4"/>
+            <circle cx="75" cy="75" r="55" fill="none" stroke="#0d4f9e" stroke-width="1.5" stroke-dasharray="3 3"/>
+            <defs>
+              <path id="arcT" d="M 75,75 m -46,0 a 46,46 0 1,1 92,0" />
+              <path id="arcB" d="M 75,75 m -46,0 a 46,46 0 1,0 92,0" />
+            </defs>
+            <text font-family="Outfit, Arial, sans-serif" font-size="10" font-weight="700" fill="#0d4f9e" letter-spacing="0.6">
+              <textPath href="#arcT" startOffset="50%" text-anchor="middle">TAXI CONVENTIONNÉ</textPath>
+            </text>
+            <text font-family="Outfit, Arial, sans-serif" font-size="10" font-weight="700" fill="#148a63" letter-spacing="1.6">
+              <textPath href="#arcB" startOffset="50%" text-anchor="middle">CPAM · SAVOIE</textPath>
+            </text>
+            <text x="75" y="84" text-anchor="middle" font-size="30">🚕</text>
+          </svg>
+        </div>
+        <div>
+          <div class="kicker">Le transport assis professionnalisé</div>
+          <h2>Votre taxi conventionné en Haute-Tarentaise</h2>
+          <div class="rule"></div>
+          <p>ASM Taxi est <strong>conventionné par la Caisse Primaire d'Assurance Maladie</strong> : véhicule agréé pour le transport assis de patients, chauffeur habitué à l'accompagnement des personnes malades, âgées ou à mobilité réduite (valides).</p>
+          <p>Basés à la gare de Bourg-Saint-Maurice, nous couvrons toute la Haute-Tarentaise — de Val d'Isère à Aime — et conduisons nos patients vers :</p>
+          <ul class="med-list">
+            <li>Centre hospitalier <strong>Albertville-Moûtiers</strong> (CHAM)</li>
+            <li>CH <strong>Métropole Savoie</strong> — Chambéry et cliniques associées</li>
+            <li><strong>CHU Grenoble-Alpes</strong> et hôpitaux <strong>lyonnais</strong> (HCL)</li>
+            <li>Centres de <strong>dialyse</strong>, <strong>radiothérapie</strong> et <strong>chimiothérapie</strong></li>
+            <li>Cabinets médicaux, kinés, centres de rééducation, laboratoires</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Section photo 2 : prise en charge ============ -->
+  <section id="eligible">
+    <div class="container">
+      <div class="med-split rev">
+        <div class="med-photo">
+          <img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&w=900&q=70" alt="Prescription médicale de transport — stéthoscope" loading="lazy" />
+        </div>
+        <div>
+          <div class="kicker">Vos droits</div>
+          <h2>Qui a droit à la prise en charge ?</h2>
+          <div class="rule"></div>
+          <p>Votre transport est pris en charge par l'Assurance Maladie lorsqu'un <strong>médecin le prescrit</strong> (prescription médicale de transport, établie <em>avant</em> le trajet sauf urgence). C'est notamment le cas pour :</p>
+          <ul class="med-list verte">
+            <li>une <strong>hospitalisation</strong> (entrée ou sortie), quelle que soit sa durée</li>
+            <li>les soins liés à une <strong>ALD</strong> si vous ne pouvez pas vous déplacer seul</li>
+            <li>les <strong>soins répétitifs</strong> : dialyse, chimiothérapie, radiothérapie, rééducation</li>
+            <li>les <strong>transports en série</strong> et trajets de <strong>+150 km</strong> (accord préalable de la caisse)</li>
+            <li>accidents du travail, maladies professionnelles, maternité (selon conditions)</li>
+          </ul>
+          <div class="med-highlight">
+            <div class="pct">100%</div>
+            <p><strong>55 %</strong> au taux standard et <strong>100 %</strong> dans de nombreuses situations (ALD exonérante, accident du travail, maternité, C2S…). Franchise de 4 € par trajet (plafond 8 €/jour, 50 €/an) à la charge du patient.</p>
+          </div>
+          <p style="font-size:0.86rem;color:var(--gris);margin-top:16px;">Tiers payant : nous facturons directement votre caisse — depuis 2025, la dispense d'avance suppose d'accepter le transport partagé quand votre état le permet. Informations générales issues d'ameli.fr ; votre situation exacte relève de votre caisse.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Pictos soins ============ -->
+  <section class="bg-med-ciel">
+    <div class="container">
+      <div class="section-head center">
+        <div class="kicker">Vos trajets santé</div>
+        <h2>Tous vos transports médicaux assis</h2>
+        <div class="rule center"></div>
+      </div>
+      <div class="med-grid">
+        <div class="med-card"><div class="ico">🩸</div><h3>Dialyse</h3><p>Trajets réguliers vers votre centre : régularité garantie à chaque séance, aller et retour.</p></div>
+        <div class="med-card"><div class="ico">💉</div><h3>Chimiothérapie &amp; radiothérapie</h3><p>Transports itératifs vers les centres de traitement, avec attente ou retour programmé.</p></div>
+        <div class="med-card"><div class="ico">🩺</div><h3>Consultations &amp; examens</h3><p>Rendez-vous médicaux, imagerie, laboratoires : porte à porte, sans stress.</p></div>
+        <div class="med-card"><div class="ico">🏥</div><h3>Hospitalisations</h3><p>Entrées et sorties d'hospitalisation, transferts entre établissements.</p></div>
+        <div class="med-card"><div class="ico">🦵</div><h3>Rééducation &amp; kiné</h3><p>Séances répétées organisées sur toute la durée de votre traitement.</p></div>
+        <div class="med-card"><div class="ico">📋</div><h3>ALD, accident du travail</h3><p>Affections de longue durée, accidents du travail, maternité (selon conditions).</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Étapes + documents ============ -->
   <section class="bg-white">
     <div class="container">
       <div class="section-head center">
-        <div class="kicker">Simple pour vous</div>
-        <h2>Comment ça se passe ?</h2>
+        <div class="kicker">Comment ça se passe ?</div>
+        <h2>Votre transport en 3 étapes</h2>
         <div class="rule center"></div>
       </div>
       <div class="steps">
         <div class="step"><h3>Votre médecin prescrit</h3><p>Il établit la prescription médicale de transport adaptée à votre état (transport assis professionnalisé).</p></div>
-        <div class="step"><h3>Vous nous appelez</h3><p>Au 07 67 67 69 81 : nous convenons des horaires, y compris pour des séries régulières (dialyse, chimio…). Nous répondons aussi à vos questions de prise en charge.</p></div>
-        <div class="step"><h3>Nous nous occupons de tout</h3><p>Prise en charge à domicile, accompagnement jusqu'au service, retour assuré, et facturation directe à votre caisse dans les conditions prévues.</p></div>
+        <div class="step"><h3>Vous nous appelez</h3><p>Au 07 67 67 69 81 : nous calons les horaires, y compris pour des séries régulières, et répondons à vos questions de prise en charge.</p></div>
+        <div class="step"><h3>Nous nous occupons de tout</h3><p>Prise en charge à domicile, accompagnement jusqu'au service, retour assuré, facturation directe à votre caisse.</p></div>
       </div>
+      <div class="section-head center" style="margin-top:64px;">
+        <h2 style="font-size:1.5rem;">Les 3 documents à préparer</h2>
+        <div class="rule center"></div>
+      </div>
+      <div class="med-docs">
+        <div class="med-doc"><div class="ico">📄</div><b>Prescription médicale de transport</b><span>Le « bon de transport » remis par votre médecin, avant le trajet (sauf urgence)</span></div>
+        <div class="med-doc"><div class="ico">💳</div><b>Carte Vitale</b><span>Ou votre attestation de droits à jour</span></div>
+        <div class="med-doc"><div class="ico">✅</div><b>Accord préalable</b><span>Uniquement si demandé : trajets +150 km, transports en série</span></div>
+      </div>
+      <p style="text-align:center;margin-top:24px;color:var(--gris);font-size:0.95rem;">C'est tout — <strong>nous nous chargeons de la télétransmission et de la facturation</strong> auprès de votre caisse.</p>
     </div>
   </section>
 
+  <!-- ============ FAQ ============ -->
   <section>
     <div class="container">
       <div class="section-head center">
@@ -205,9 +480,10 @@
     </div>
   </section>
 
+  <!-- ============ CTA ============ -->
   <section style="padding-top:0;">
     <div class="container">
-      <div class="cta-band">
+      <div class="cta-band med-cta">
         <h2>Un transport médical à programmer ?</h2>
         <p>Appelez-nous : nous vérifions ensemble votre prise en charge et calons vos trajets.</p>
         <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">

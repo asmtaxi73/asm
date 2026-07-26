@@ -16,7 +16,7 @@ export const HUBS = [
     kind: "aeroport",
     duree: "2 h 30",
     km: "165 km",
-    base: 450,
+    base: 390,
     matrix: true,
     metaTitle: "Taxi & VTC Bourg-Saint-Maurice ⇄ Aéroport de Genève | ASM TAXI",
     metaDesc: "Transfert taxi entre Bourg-Saint-Maurice, les stations de Tarentaise et l'aéroport de Genève (GVA) : privé, direct, suivi de vol, 7j/7. Tarifs jour/nuit toutes stations. ☎ 07 67 67 69 81",
@@ -35,7 +35,7 @@ export const HUBS = [
       { h3: "Genève côté pratique", p: "L'aéroport se trouve côté Suisse mais dispose d'un secteur France. Selon votre compagnie et votre terminal, nous vous déposons au plus près du bon hall — pensez à nous indiquer votre numéro de vol à la réservation." }
     ],
     faq: [
-      { q: "Combien coûte un taxi Bourg-Saint-Maurice → aéroport de Genève ?", a: "À partir de 450 € en journée pour 1 à 4 passagers (tarif indicatif). Le tableau ci-dessus donne les tarifs depuis chaque station ; demandez votre devis gratuit pour un prix ferme." },
+      { q: "Combien coûte un taxi Bourg-Saint-Maurice → aéroport de Genève ?", a: "À partir de 390 € en journée pour 1 à 4 passagers (tarif indicatif) — l'un des meilleurs prix du marché en Tarentaise. Le tableau ci-dessus donne les tarifs depuis chaque station ; demandez votre devis gratuit pour un prix ferme." },
       { q: "Que se passe-t-il si mon avion a du retard ?", a: "Nous suivons votre vol en direct : l'heure de prise en charge s'ajuste automatiquement, sans supplément. Vous ne payez jamais une attente due à l'avion." },
       { q: "Le passage de frontière pose-t-il problème ?", a: "Non : munissez-vous simplement d'une pièce d'identité en cours de validité. Votre chauffeur connaît les postes frontières et choisit le passage le plus fluide selon le trafic." }
     ],
@@ -50,7 +50,7 @@ export const HUBS = [
     kind: "aeroport",
     duree: "2 h 15",
     km: "200 km",
-    base: 540,
+    base: 440,
     matrix: true,
     metaTitle: "Taxi & VTC Bourg-Saint-Maurice ⇄ Aéroport de Lyon | ASM TAXI",
     metaDesc: "Transfert taxi entre Bourg-Saint-Maurice, les stations de Tarentaise et l'aéroport Lyon-Saint-Exupéry (LYS) + gare TGV : privé, direct, suivi de vol, 7j/7. ☎ 07 67 67 69 81",
@@ -69,9 +69,9 @@ export const HUBS = [
       { h3: "Le bon timing", p: "Comptez 2 h 15 de trajet hors affluence. Les samedis d'hiver, l'axe Albertville-Chambéry peut saturer : nous partons en avance et connaissons les itinéraires de délestage par la Chartreuse ou les Bauges." }
     ],
     faq: [
-      { q: "Combien coûte un taxi Bourg-Saint-Maurice → aéroport de Lyon ?", a: "À partir de 540 € en journée pour 1 à 4 passagers (tarif indicatif). Consultez le tableau des tarifs depuis chaque station et demandez votre devis." },
+      { q: "Combien coûte un taxi Bourg-Saint-Maurice → aéroport de Lyon ?", a: "À partir de 440 € en journée pour 1 à 4 passagers (tarif indicatif), un tarif très compétitif sur ce trajet. Consultez le tableau des tarifs depuis chaque station et demandez votre devis." },
       { q: "Pouvez-vous nous déposer à la gare TGV de Lyon-Saint-Exupéry ?", a: "Oui, la gare est intégrée à l'aéroport : même trajet, même tarif. Indiquez simplement votre train à la réservation." },
-      { q: "Faites-vous les départs pour les vols de 6 h du matin ?", a: "Oui : nous partons de la station à l'heure nécessaire, y compris en pleine nuit. Le tarif de nuit s'applique avant 7 h." }
+      { q: "Faites-vous les départs pour les vols de 6 h du matin ?", a: "Oui : nous partons de la station à l'heure nécessaire, y compris en pleine nuit — et sans majoration de nuit sur les transferts aéroport : le tarif est le même qu'en journée." }
     ],
     proches: ["geneve", "chambery", "grenoble", "annecy"]
   },
@@ -84,7 +84,7 @@ export const HUBS = [
     kind: "aeroport",
     duree: "1 h 30",
     km: "105 km",
-    base: 350,
+    base: 290,
     matrix: true,
     metaTitle: "Taxi & VTC Bourg-Saint-Maurice ⇄ Chambéry | ASM TAXI",
     metaDesc: "Transfert taxi entre Bourg-Saint-Maurice, les stations de Tarentaise et Chambéry : gare SNCF, aéroport Chambéry-Savoie (CMF), centre-ville. 7j/7. ☎ 07 67 67 69 81",
@@ -103,7 +103,7 @@ export const HUBS = [
       { h3: "La gare de Chambéry", p: "Quand les TGV directs pour Bourg-Saint-Maurice sont complets ou hors saison, passer par Chambéry est la meilleure alternative : trains fréquents depuis Paris et Lyon, puis 1 h 30 de taxi jusqu'à votre station." }
     ],
     faq: [
-      { q: "Combien coûte un taxi Bourg-Saint-Maurice → Chambéry ?", a: "À partir de 350 € en journée pour 1 à 4 passagers (tarif indicatif), gare ou aéroport. Voir le tableau pour les départs depuis les stations." },
+      { q: "Combien coûte un taxi Bourg-Saint-Maurice → Chambéry ?", a: "À partir de 290 € en journée pour 1 à 4 passagers (tarif indicatif), gare ou aéroport. Voir le tableau pour les départs depuis les stations." },
       { q: "Assurez-vous les transferts vers l'hôpital de Chambéry ?", a: "Oui, nous réalisons les trajets vers le centre hospitalier Métropole Savoie et les cliniques, à l'aller comme au retour." },
       { q: "Chambéry ou Genève : quel aéroport choisir ?", a: "Chambéry est plus proche (1 h 30 contre 2 h 30) mais propose moins de vols. Genève offre plus de fréquences et de destinations. À trajets égaux, Chambéry est le plus économique en taxi." }
     ],

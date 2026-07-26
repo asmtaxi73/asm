@@ -37,7 +37,7 @@ export const STATIONS = [
     faq: [
       { q: "Combien coûte un taxi de la gare de Bourg-Saint-Maurice à La Rosière ?", a: "À partir de 90 € en journée pour 1 à 4 passagers (tarif indicatif). Le tarif exact dépend de l'horaire, du nombre de passagers et de votre adresse exacte : demandez votre devis gratuit." },
       { q: "Le taxi monte-t-il jusqu'aux Eucherts ?", a: "Oui, nous vous déposons au plus près de votre logement, aux Eucherts comme dans tous les quartiers de La Rosière, y compris en soirée." },
-      { q: "Peut-on réserver un taxi La Rosière → aéroport de Genève ?", a: "Bien sûr : comptez à partir de 490 € en journée (1-4 passagers). Nous suivons votre vol et adaptons l'horaire de départ à la circulation du jour." }
+      { q: "Peut-on réserver un taxi La Rosière → aéroport de Genève ?", a: "Bien sûr : comptez à partir de 430 € en journée (1-4 passagers). Nous suivons votre vol et adaptons l'horaire de départ à la circulation du jour." }
     ],
     proches: ["seez", "montvalezan", "sainte-foy-tarentaise", "les-arcs-1800"]
   },
@@ -71,7 +71,7 @@ export const STATIONS = [
     faq: [
       { q: "Combien coûte un taxi de la gare de Bourg-Saint-Maurice à Arc 1600 ?", a: "À partir de 60 € en journée pour 1 à 4 passagers (tarif indicatif). Devis gratuit et prix ferme à la réservation." },
       { q: "Le taxi circule-t-il quand le funiculaire est fermé ?", a: "Oui, nous roulons 7j/7, y compris tôt le matin, tard le soir et hors saison, quels que soient les horaires du funiculaire." },
-      { q: "Pouvez-vous nous conduire d'Arc 1600 à l'aéroport de Genève ?", a: "Oui, à partir de 475 € en journée (1-4 passagers), avec suivi de votre vol et départ adapté à la circulation." }
+      { q: "Pouvez-vous nous conduire d'Arc 1600 à l'aéroport de Genève ?", a: "Oui, à partir de 415 € en journée (1-4 passagers), avec suivi de votre vol et départ adapté à la circulation." }
     ],
     proches: ["les-arcs-1800", "les-arcs-1950", "les-arcs-2000", "villaroger"]
   },
@@ -105,7 +105,7 @@ export const STATIONS = [
     faq: [
       { q: "Combien coûte un taxi de la gare de Bourg-Saint-Maurice aux Arcs 1800 ?", a: "À partir de 70 € en journée pour 1 à 4 passagers (tarif indicatif). Le prix ferme vous est confirmé à la réservation." },
       { q: "Combien de temps faut-il pour monter à Arc 1800 ?", a: "Environ 25 minutes en conditions normales. Les samedis de vacances scolaires, nous prévoyons une marge supplémentaire." },
-      { q: "Assurez-vous les transferts Arc 1800 → aéroport de Lyon ?", a: "Oui, à partir de 570 € en journée (1-4 passagers), départ de votre résidence avec suivi de vol." }
+      { q: "Assurez-vous les transferts Arc 1800 → aéroport de Lyon ?", a: "Oui, à partir de 470 € en journée (1-4 passagers), départ de votre résidence avec suivi de vol." }
     ],
     proches: ["les-arcs-1600", "les-arcs-1950", "peisey-vallandry", "la-rosiere"]
   },
@@ -173,7 +173,7 @@ export const STATIONS = [
     faq: [
       { q: "Combien coûte un taxi de la gare de Bourg-Saint-Maurice à Arc 2000 ?", a: "À partir de 85 € en journée pour 1 à 4 passagers (tarif indicatif). Prix ferme communiqué à la réservation." },
       { q: "Montez-vous à Arc 2000 quand il neige fort ?", a: "Oui : véhicule équipé (pneus hiver, chaînes) et chauffeur habitué à la route. En cas de conditions exceptionnelles, nous anticipons le départ pour garantir votre correspondance." },
-      { q: "Quel est le prix d'un transfert Arc 2000 → aéroport de Genève ?", a: "À partir de 490 € en journée pour 1 à 4 passagers, prise en charge devant votre résidence, suivi de vol inclus." }
+      { q: "Quel est le prix d'un transfert Arc 2000 → aéroport de Genève ?", a: "À partir de 430 € en journée pour 1 à 4 passagers, prise en charge devant votre résidence, suivi de vol inclus." }
     ],
     proches: ["les-arcs-1950", "les-arcs-1800", "villaroger", "la-rosiere"]
   },
@@ -207,7 +207,7 @@ export const STATIONS = [
     faq: [
       { q: "Combien coûte un taxi de la gare de Bourg-Saint-Maurice à Peisey-Vallandry ?", a: "À partir de 70 € en journée pour 1 à 4 passagers (tarif indicatif), selon le hameau de destination." },
       { q: "Desservez-vous Peisey-Nancroix et Rosuel ?", a: "Oui, nous montons jusqu'à Nancroix et, l'été, jusqu'au refuge porte de Rosuel pour vos départs de randonnée en Vanoise." },
-      { q: "Quel est le tarif Peisey-Vallandry → aéroport de Genève ?", a: "À partir de 480 € en journée (1-4 passagers), prise en charge à votre hébergement, suivi de vol inclus." }
+      { q: "Quel est le tarif Peisey-Vallandry → aéroport de Genève ?", a: "À partir de 420 € en journée (1-4 passagers), prise en charge à votre hébergement, suivi de vol inclus." }
     ],
     proches: ["les-arcs-1800", "la-plagne", "les-arcs-1600", "aime-la-plagne"]
   },
@@ -241,7 +241,7 @@ export const STATIONS = [
     faq: [
       { q: "Combien coûte un taxi de Bourg-Saint-Maurice à La Plagne ?", a: "À partir de 110 € en journée pour 1 à 4 passagers selon le village de destination (tarif indicatif). Depuis la gare d'Aime, le tarif est plus bas : demandez votre devis." },
       { q: "Desservez-vous Montchavin et Les Coches ?", a: "Oui, ainsi que Champagny-en-Vanoise et tous les villages du versant. Précisez votre résidence à la réservation." },
-      { q: "Quel est le prix d'un transfert La Plagne → aéroport de Genève ?", a: "À partir de 510 € en journée pour 1 à 4 passagers, depuis votre village de La Plagne, suivi de vol inclus." }
+      { q: "Quel est le prix d'un transfert La Plagne → aéroport de Genève ?", a: "À partir de 450 € en journée pour 1 à 4 passagers, depuis votre village de La Plagne, suivi de vol inclus." }
     ],
     proches: ["aime-la-plagne", "peisey-vallandry", "les-arcs-1800", "moutiers"]
   },
@@ -275,7 +275,7 @@ export const STATIONS = [
     faq: [
       { q: "Combien coûte un taxi de Bourg-Saint-Maurice à Courchevel ?", a: "À partir de 160 € en journée hors saison d'hiver pour 1 à 4 passagers (tarif indicatif). Demandez votre devis gratuit : le prix ferme est confirmé avant le départ." },
       { q: "Desservez-vous tous les niveaux de Courchevel ?", a: "Oui : Courchevel 1850, Moriond 1650, Le Village 1550, Le Praz et La Tania. Nous vous déposons à l'adresse exacte de votre séjour." },
-      { q: "Peut-on réserver un transfert Courchevel → aéroport de Genève ?", a: "Bien sûr : comptez à partir de 480 € en journée (1-4 passagers), avec suivi de votre vol et horaire de départ adapté à la circulation." }
+      { q: "Peut-on réserver un transfert Courchevel → aéroport de Genève ?", a: "Bien sûr : comptez à partir de 420 € en journée (1-4 passagers), avec suivi de votre vol et horaire de départ adapté à la circulation." }
     ],
     proches: ["la-plagne", "aime-la-plagne", "moutiers", "peisey-vallandry"]
   },
@@ -309,7 +309,7 @@ export const STATIONS = [
     faq: [
       { q: "Combien coûte un taxi de Bourg-Saint-Maurice à Sainte-Foy station ?", a: "À partir de 85 € en journée pour 1 à 4 passagers (tarif indicatif). Le chef-lieu, plus proche, est moins cher : demandez votre devis." },
       { q: "Montez-vous jusqu'aux hameaux du Miroir ou de La Masure ?", a: "Oui, nous desservons tous les hameaux accessibles par la route, hiver comme été." },
-      { q: "Quel est le tarif Sainte-Foy → aéroport de Genève ?", a: "À partir de 495 € en journée pour 1 à 4 passagers, prise en charge à votre chalet." }
+      { q: "Quel est le tarif Sainte-Foy → aéroport de Genève ?", a: "À partir de 435 € en journée pour 1 à 4 passagers, prise en charge à votre chalet." }
     ],
     proches: ["la-rosiere", "villaroger", "val-disere", "seez"]
   },
@@ -343,7 +343,7 @@ export const STATIONS = [
     faq: [
       { q: "Combien coûte un taxi de la gare de Bourg-Saint-Maurice à Villaroger ?", a: "À partir de 60 € en journée pour 1 à 4 passagers (tarif indicatif)." },
       { q: "Desservez-vous les hameaux du Planay et de La Savonne ?", a: "Oui, tous les hameaux de la commune accessibles par la route sont desservis, hiver comme été." },
-      { q: "Peut-on réserver un transfert Villaroger → aéroport de Genève ?", a: "Bien sûr : à partir de 480 € en journée (1-4 passagers), prise en charge devant votre hébergement." }
+      { q: "Peut-on réserver un transfert Villaroger → aéroport de Genève ?", a: "Bien sûr : à partir de 420 € en journée (1-4 passagers), prise en charge devant votre hébergement." }
     ],
     proches: ["les-arcs-2000", "sainte-foy-tarentaise", "les-arcs-1600", "la-rosiere"]
   },
@@ -377,7 +377,7 @@ export const STATIONS = [
     faq: [
       { q: "Combien coûte un taxi de la gare de Bourg-Saint-Maurice à Tignes ?", a: "À partir de 110 € en journée pour 1 à 4 passagers selon le quartier (tarif indicatif). Prix ferme à la réservation." },
       { q: "Y a-t-il des taxis à l'arrivée des TGV du samedi ?", a: "Sur réservation, nous vous attendons à quai avec un panneau à votre nom, même aux heures de pointe. Réservez dès que vous avez vos billets." },
-      { q: "Quel est le prix d'un transfert Tignes → aéroport de Genève ?", a: "À partir de 525 € en journée pour 1 à 4 passagers, départ de votre résidence, suivi de vol inclus." }
+      { q: "Quel est le prix d'un transfert Tignes → aéroport de Genève ?", a: "À partir de 465 € en journée pour 1 à 4 passagers, départ de votre résidence, suivi de vol inclus." }
     ],
     proches: ["val-disere", "sainte-foy-tarentaise", "la-rosiere", "seez"]
   },
@@ -410,7 +410,7 @@ export const STATIONS = [
     ],
     faq: [
       { q: "Combien coûte un taxi de la gare de Bourg-Saint-Maurice à Val d'Isère ?", a: "À partir de 120 € en journée pour 1 à 4 passagers (tarif indicatif). Le prix ferme est confirmé à la réservation selon votre quartier et l'horaire." },
-      { q: "Assurez-vous les transferts Val d'Isère → aéroport de Genève ?", a: "Oui, c'est l'un de nos trajets phares : à partir de 535 € en journée (1-4 passagers), départ de votre hébergement, suivi de vol, équipement hiver." },
+      { q: "Assurez-vous les transferts Val d'Isère → aéroport de Genève ?", a: "Oui, c'est l'un de nos trajets phares : à partir de 475 € en journée (1-4 passagers), départ de votre hébergement, suivi de vol, équipement hiver." },
       { q: "Peut-on réserver pour l'arrivée du dernier TGV ?", a: "Oui, nous assurons les prises en charge tardives à la gare de Bourg-Saint-Maurice, y compris après 22h, sur réservation." }
     ],
     proches: ["tignes", "sainte-foy-tarentaise", "la-rosiere", "seez"]
@@ -445,7 +445,7 @@ export const STATIONS = [
     faq: [
       { q: "Combien coûte un taxi de la gare de Bourg-Saint-Maurice à Séez ?", a: "À partir de 25 € en journée (tarif indicatif). Un tarif minimum de prise en charge s'applique sur les petites courses." },
       { q: "Faites-vous les petites courses locales à Séez ?", a: "Oui, 7j/7 : gare, commerces, rendez-vous médicaux, liaisons entre hameaux. Appelez-nous, nous sommes basés à côté." },
-      { q: "Peut-on partir de Séez vers l'aéroport de Genève ?", a: "Bien sûr : à partir de 460 € en journée (1-4 passagers) au départ de votre domicile à Séez." }
+      { q: "Peut-on partir de Séez vers l'aéroport de Genève ?", a: "Bien sûr : à partir de 400 € en journée (1-4 passagers) au départ de votre domicile à Séez." }
     ],
     proches: ["la-rosiere", "montvalezan", "sainte-foy-tarentaise", "villaroger"]
   },
@@ -479,7 +479,7 @@ export const STATIONS = [
     faq: [
       { q: "Combien coûte un taxi de la gare de Bourg-Saint-Maurice à Montvalezan ?", a: "À partir de 65 € en journée pour 1 à 4 passagers selon le hameau (tarif indicatif)." },
       { q: "Pouvez-vous nous monter chaque matin aux pistes de La Rosière ?", a: "Oui, nous organisons des rotations quotidiennes pendant votre séjour, à tarif adapté. Parlez-nous de vos horaires." },
-      { q: "Quel est le tarif Montvalezan → aéroport de Genève ?", a: "À partir de 485 € en journée (1-4 passagers) depuis votre hameau." }
+      { q: "Quel est le tarif Montvalezan → aéroport de Genève ?", a: "À partir de 425 € en journée (1-4 passagers) depuis votre hameau." }
     ],
     proches: ["la-rosiere", "seez", "sainte-foy-tarentaise", "villaroger"]
   },
@@ -547,7 +547,7 @@ export const STATIONS = [
     faq: [
       { q: "Combien coûte un taxi entre la gare d'Aime et La Plagne ?", a: "À partir de 65 € en journée vers Montalbert et 95 € vers Plagne Centre pour 1 à 4 passagers (tarifs indicatifs)." },
       { q: "Assurez-vous la liaison entre les gares d'Aime et de Bourg-Saint-Maurice ?", a: "Oui, en 15 minutes environ — utile en cas de correspondance manquée ou de TGV ne desservant qu'une des deux gares. À partir de 45 €." },
-      { q: "Quel est le tarif Aime → aéroport de Genève ?", a: "À partir de 440 € en journée pour 1 à 4 passagers, prise en charge en gare d'Aime ou à votre hébergement." }
+      { q: "Quel est le tarif Aime → aéroport de Genève ?", a: "À partir de 380 € en journée pour 1 à 4 passagers, prise en charge en gare d'Aime ou à votre hébergement." }
     ],
     proches: ["la-plagne", "moutiers", "peisey-vallandry", "les-arcs-1600"]
   }

@@ -2,9 +2,11 @@
 // ASM TAXI — Données AÉROPORTS, GARES & VILLES
 // base : prix "à partir de" (1-4 passagers, jour) depuis/vers
 //        la gare de Bourg-Saint-Maurice.
+//        FORMULE : km (gare BSM → destination) × 2,35 €/km,
+//        arrondi aux 5 €.
 // matrix: true → la page affiche le tableau des tarifs depuis
-//        les principales stations (base + supplement de chaque station).
-// ⚠ TARIFS INDICATIFS alignés sur le marché local — à valider.
+//        les principales stations (base + supplement de chaque station,
+//        le supplément étant calculé à 3,45 €/km station → gare BSM).
 // ============================================================
 
 export const HUBS = [
@@ -35,7 +37,7 @@ export const HUBS = [
       { h3: "Genève côté pratique", p: "L'aéroport se trouve côté Suisse mais dispose d'un secteur France. Selon votre compagnie et votre terminal, nous vous déposons au plus près du bon hall — pensez à nous indiquer votre numéro de vol à la réservation." }
     ],
     faq: [
-      { q: "Combien coûte un taxi Bourg-Saint-Maurice → aéroport de Genève ?", a: "À partir de 390 € en journée pour 1 à 4 passagers (tarif indicatif) — l'un des meilleurs prix du marché en Tarentaise. Le tableau ci-dessus donne les tarifs depuis chaque station ; demandez votre devis gratuit pour un prix ferme." },
+      { q: "Combien coûte un taxi Bourg-Saint-Maurice → aéroport de Genève ?", a: "À partir de 390 € pour 1 à 4 passagers, jour et nuit (tarif indicatif), calculé au plus juste selon la distance. Le tableau ci-dessus donne les tarifs depuis chaque station ; demandez votre devis gratuit pour un prix ferme." },
       { q: "Que se passe-t-il si mon avion a du retard ?", a: "Nous suivons votre vol en direct : l'heure de prise en charge s'ajuste automatiquement, sans supplément. Vous ne payez jamais une attente due à l'avion." },
       { q: "Le passage de frontière pose-t-il problème ?", a: "Non : munissez-vous simplement d'une pièce d'identité en cours de validité. Votre chauffeur connaît les postes frontières et choisit le passage le plus fluide selon le trafic." }
     ],
@@ -50,7 +52,7 @@ export const HUBS = [
     kind: "aeroport",
     duree: "2 h 15",
     km: "200 km",
-    base: 440,
+    base: 470,
     matrix: true,
     metaTitle: "Taxi & VTC Bourg-Saint-Maurice ⇄ Aéroport de Lyon | ASM TAXI",
     metaDesc: "Transfert taxi entre Bourg-Saint-Maurice, les stations de Tarentaise et l'aéroport Lyon-Saint-Exupéry (LYS) + gare TGV : privé, direct, suivi de vol, 7j/7. ☎ 07 67 67 69 81",
@@ -69,7 +71,7 @@ export const HUBS = [
       { h3: "Le bon timing", p: "Comptez 2 h 15 de trajet hors affluence. Les samedis d'hiver, l'axe Albertville-Chambéry peut saturer : nous partons en avance et connaissons les itinéraires de délestage par la Chartreuse ou les Bauges." }
     ],
     faq: [
-      { q: "Combien coûte un taxi Bourg-Saint-Maurice → aéroport de Lyon ?", a: "À partir de 440 € en journée pour 1 à 4 passagers (tarif indicatif), un tarif très compétitif sur ce trajet. Consultez le tableau des tarifs depuis chaque station et demandez votre devis." },
+      { q: "Combien coûte un taxi Bourg-Saint-Maurice → aéroport de Lyon ?", a: "À partir de 470 € pour 1 à 4 passagers, jour et nuit (tarif indicatif), calculé au plus juste selon la distance. Consultez le tableau des tarifs depuis chaque station et demandez votre devis." },
       { q: "Pouvez-vous nous déposer à la gare TGV de Lyon-Saint-Exupéry ?", a: "Oui, la gare est intégrée à l'aéroport : même trajet, même tarif. Indiquez simplement votre train à la réservation." },
       { q: "Faites-vous les départs pour les vols de 6 h du matin ?", a: "Oui : nous partons de la station à l'heure nécessaire, y compris en pleine nuit — et sans majoration de nuit sur les transferts aéroport : le tarif est le même qu'en journée." }
     ],
@@ -84,7 +86,7 @@ export const HUBS = [
     kind: "aeroport",
     duree: "1 h 30",
     km: "105 km",
-    base: 290,
+    base: 245,
     matrix: true,
     metaTitle: "Taxi & VTC Bourg-Saint-Maurice ⇄ Chambéry | ASM TAXI",
     metaDesc: "Transfert taxi entre Bourg-Saint-Maurice, les stations de Tarentaise et Chambéry : gare SNCF, aéroport Chambéry-Savoie (CMF), centre-ville. 7j/7. ☎ 07 67 67 69 81",
@@ -103,7 +105,7 @@ export const HUBS = [
       { h3: "La gare de Chambéry", p: "Quand les TGV directs pour Bourg-Saint-Maurice sont complets ou hors saison, passer par Chambéry est la meilleure alternative : trains fréquents depuis Paris et Lyon, puis 1 h 30 de taxi jusqu'à votre station." }
     ],
     faq: [
-      { q: "Combien coûte un taxi Bourg-Saint-Maurice → Chambéry ?", a: "À partir de 290 € en journée pour 1 à 4 passagers (tarif indicatif), gare ou aéroport. Voir le tableau pour les départs depuis les stations." },
+      { q: "Combien coûte un taxi Bourg-Saint-Maurice → Chambéry ?", a: "À partir de 245 € pour 1 à 4 passagers, jour et nuit (tarif indicatif), gare ou aéroport — le meilleur prix du marché. Voir le tableau pour les départs depuis les stations." },
       { q: "Assurez-vous les transferts vers l'hôpital de Chambéry ?", a: "Oui, nous réalisons les trajets vers le centre hospitalier Métropole Savoie et les cliniques, à l'aller comme au retour." },
       { q: "Chambéry ou Genève : quel aéroport choisir ?", a: "Chambéry est plus proche (1 h 30 contre 2 h 30) mais propose moins de vols. Genève offre plus de fréquences et de destinations. À trajets égaux, Chambéry est le plus économique en taxi." }
     ],
@@ -118,7 +120,7 @@ export const HUBS = [
     kind: "aeroport",
     duree: "2 h 15",
     km: "190 km",
-    base: 540,
+    base: 445,
     matrix: true,
     metaTitle: "Taxi & VTC Bourg-Saint-Maurice ⇄ Grenoble | ASM TAXI",
     metaDesc: "Transfert taxi entre Bourg-Saint-Maurice, les stations de Tarentaise et Grenoble : aéroport Grenoble-Alpes-Isère (GNB), gare, centre-ville. 7j/7. ☎ 07 67 67 69 81",
@@ -137,7 +139,7 @@ export const HUBS = [
       { h3: "Grenoble ville", p: "Capitale des Alpes à 2 h de la Tarentaise, Grenoble concentre CHU, université et entreprises. Nous assurons les liaisons médicales, professionnelles et étudiantes depuis toute la vallée." }
     ],
     faq: [
-      { q: "Combien coûte un taxi Bourg-Saint-Maurice → aéroport de Grenoble ?", a: "À partir de 540 € en journée pour 1 à 4 passagers (tarif indicatif). Le tableau détaille les tarifs depuis chaque station." },
+      { q: "Combien coûte un taxi Bourg-Saint-Maurice → aéroport de Grenoble ?", a: "À partir de 445 € pour 1 à 4 passagers, jour et nuit (tarif indicatif), calculé au plus juste selon la distance. Le tableau détaille les tarifs depuis chaque station." },
       { q: "Mon vol arrive samedi à GNB en février : faut-il réserver longtemps à l'avance ?", a: "Oui, les samedis d'hiver sont très demandés. Réservez dès l'achat de vos billets — nous garantissons alors votre créneau, vol suivi en temps réel." },
       { q: "Desservez-vous le CHU de Grenoble ?", a: "Oui, nous assurons les trajets vers le CHU Grenoble-Alpes et les cliniques de l'agglomération." }
     ],
@@ -152,7 +154,7 @@ export const HUBS = [
     kind: "ville",
     duree: "2 h 00",
     km: "130 km",
-    base: 420,
+    base: 305,
     matrix: true,
     metaTitle: "Taxi & VTC Bourg-Saint-Maurice ⇄ Annecy | ASM TAXI",
     metaDesc: "Transfert taxi entre Bourg-Saint-Maurice, les stations de Tarentaise et Annecy : gare, vieille ville, lac, aéroport Annecy Mont-Blanc. 7j/7. ☎ 07 67 67 69 81",
@@ -171,7 +173,7 @@ export const HUBS = [
       { h3: "L'aéroport d'Annecy", p: "Annecy Mont-Blanc (NCY) accueille l'aviation d'affaires et quelques liaisons saisonnières. Nous assurons les transferts jets privés vers toutes les stations de Tarentaise, avec accueil au pied de l'avion quand l'opérateur le permet." }
     ],
     faq: [
-      { q: "Combien coûte un taxi Bourg-Saint-Maurice → Annecy ?", a: "À partir de 420 € en journée pour 1 à 4 passagers (tarif indicatif)." },
+      { q: "Combien coûte un taxi Bourg-Saint-Maurice → Annecy ?", a: "À partir de 305 € pour 1 à 4 passagers, jour et nuit (tarif indicatif)." },
       { q: "Proposez-vous des excursions à la journée vers Annecy ?", a: "Oui : dépose le matin, récupération le soir, à l'heure convenue. Tarif aller-retour préférentiel — demandez votre devis." },
       { q: "Assurez-vous les transferts depuis l'aéroport d'affaires d'Annecy ?", a: "Oui, nous prenons en charge les passagers de l'aviation d'affaires (NCY) vers Val d'Isère, Courchevel, Les Arcs et toute la Tarentaise." }
     ],
@@ -186,7 +188,7 @@ export const HUBS = [
     kind: "gare",
     duree: "30 min",
     km: "28 km",
-    base: 90,
+    base: 65,
     matrix: false,
     metaTitle: "Taxi & VTC Bourg-Saint-Maurice ⇄ Gare de Moûtiers | ASM TAXI",
     metaDesc: "Taxi entre Bourg-Saint-Maurice et la gare de Moûtiers-Salins-Brides-les-Bains : correspondances TGV, liaisons vallée, 7j/7. ☎ 07 67 67 69 81",
@@ -205,7 +207,7 @@ export const HUBS = [
       { h3: "Autour de Moûtiers", p: "Brides-les-Bains (thermes et porte de Méribel), Salins-les-Thermes, La Léchère-les-Bains : le bassin de Moûtiers est aussi une destination bien-être. Nous y conduisons curistes et vacanciers toute l'année." }
     ],
     faq: [
-      { q: "Combien coûte un taxi entre Moûtiers et Bourg-Saint-Maurice ?", a: "À partir de 90 € en journée pour 1 à 4 passagers (tarif indicatif)." },
+      { q: "Combien coûte un taxi entre Moûtiers et Bourg-Saint-Maurice ?", a: "À partir de 65 € en journée pour 1 à 4 passagers (tarif indicatif)." },
       { q: "Mon TGV arrive à Moûtiers, pouvez-vous me monter aux Arcs ?", a: "Oui, comptez environ 55 minutes jusqu'à Arc 1800. Tarif sur devis selon la station — réservez avec votre numéro de train." },
       { q: "Assurez-vous les arrivées tardives à Moûtiers ?", a: "Oui, sur réservation, y compris pour les trains de nuit et les correspondances après 22 h." }
     ],
@@ -220,7 +222,7 @@ export const HUBS = [
     kind: "ville",
     duree: "50 min",
     km: "55 km",
-    base: 140,
+    base: 130,
     matrix: false,
     metaTitle: "Taxi & VTC Bourg-Saint-Maurice ⇄ Albertville | ASM TAXI",
     metaDesc: "Taxi entre Bourg-Saint-Maurice et Albertville : hôpital, gare, centre-ville, zones commerciales. Courses médicales et privées 7j/7. ☎ 07 67 67 69 81",
@@ -239,7 +241,7 @@ export const HUBS = [
       { h3: "Albertville pratique", p: "À mi-chemin entre les stations et les grandes villes, Albertville est aussi une étape : gare routière, locations de matériel moins chères, hypermarchés. L'aller-retour dans la demi-journée est courant — parlez-nous de votre programme." }
     ],
     faq: [
-      { q: "Combien coûte un taxi Bourg-Saint-Maurice → Albertville ?", a: "À partir de 140 € en journée pour 1 à 4 passagers (tarif indicatif)." },
+      { q: "Combien coûte un taxi Bourg-Saint-Maurice → Albertville ?", a: "À partir de 130 € pour 1 à 4 passagers, jour et nuit (tarif indicatif)." },
       { q: "Pouvez-vous m'attendre pendant mon rendez-vous à l'hôpital ?", a: "Oui, nous proposons la mise à disposition avec attente et retour : demandez un devis aller-retour, souvent plus avantageux que deux courses séparées." },
       { q: "Desservez-vous le Beaufortain depuis Albertville ?", a: "Oui, sur demande : Beaufort, Arêches-Beaufort et le lac de Roselend font partie de nos destinations estivales." }
     ],

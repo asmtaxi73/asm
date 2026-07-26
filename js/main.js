@@ -34,16 +34,20 @@
   });
 
   /* --- Traduction anglaise (Google Translate) ---
-     Le bouton EN ouvre la page courante du site traduite en anglais
-     via le proxy translate.goog (fonctionne sur le domaine en ligne). */
+     Le bouton EN ouvre la page courante traduite en anglais via le
+     proxy translate.goog. L'hôte est déduit du domaine réel du site,
+     donc le bouton marche quel que soit l'hébergement. Nécessite que
+     le site soit accessible publiquement (pas en localhost). */
   document.querySelectorAll(".js-translate").forEach(function (btn) {
     btn.addEventListener("click", function (e) {
+      var hostname = window.location.hostname;
+      if (/^(localhost|127\.|192\.168\.)/.test(hostname)) return; // aperçu local : suit le lien statique
       e.preventDefault();
       var path = window.location.pathname;
       if (path === "/" || path === "") path = "/index.html";
+      var proxyHost = hostname.replace(/-/g, "--").replace(/\./g, "-") + ".translate.goog";
       window.location.href =
-        "https://www-asm--taxi-fr.translate.goog" + path +
-        "?_x_tr_sl=fr&_x_tr_tl=en&_x_tr_hl=en";
+        "https://" + proxyHost + path + "?_x_tr_sl=fr&_x_tr_tl=en&_x_tr_hl=en";
     });
   });
 
